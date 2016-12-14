@@ -44,40 +44,161 @@ unsigned char Step_Jump = 0;
 #define FWD 1 //Clockwise
 #define REV 0 //Anti- Clockwise
 
+
 /*
- * Attiny2313 -> L6506
+ *  Shift Reg Defines
+ *  Cannot use SPI due to OC1B...lets try
+ * */
+#define shift_reg_port PORTB /**< Port register for Shift Register */
+#define shift_reg_ddr DDRB /**< Data direction register for Shift Register */
+#define SH_CP PB5 /**< Shift register Serial clock pulse (PIN 11 of 74HC595) connection to MCU I/O Port bit. */
+#define ST_CP PB0 /**< Shift register Latch clock pulse (PIN 12 of 74HC595) connection to MCU I/O Port bit. */
+#define DS PB3 /**< Shift register Data (PIN 14 of 74HC595) connection to MCU I/O Port bit. */
+void init_shift_reg(void);
+void latch(void);
+void shift_Data_8_bits(uint8_t data);
+void shift_Data_16_bits(uint16_t data);
+
+/*
+ * atmega328p -> H bridge
  *  */
 
-#define PHASE1_A PB1 //CNT1 or PHASE1-1 or Motor winding 1A. Goes to L6506 IN1
-#define PHASE2_A PB6 //CNT2 or PHASE2-1 or Motor winding 2A. Goes to L6506 IN3
-#define PHASE1_B PB5 //NotCNT1 or PHASE1-2 or Motor winding 1B. Goes to L6506 IN2
-#define PHASE2_B PB7 //Not CNT2 or PHASE2-2 or Motor winding 2B. Goes to L6506 IN4
+/*
+ * 7408 pin 3 -> H bridge InA/ In1 -> H bridge OutA /Out1 -> Stepper 1A
+ * 7408 pin 6 -> H bridge InB/ In2 -> H bridge OutB /Out2 -> Stepper 1B
+ * 7408 pin 8 -> H bridge InC/ In3 -> H bridge OutC /Out3 -> Stepper 2A
+ * 7408 pin 11 -> H bridge InD/ In4 -> H bridge OutD /Out4 -> Stepper 2B
+ * */
+#define PHASE1_A PB1 //CNT1 or PHASE1-1 or Motor winding 1A. 7408(AND gate) pin 2. in future driven using Shift reg
+#define PHASE2_A PB6 //CNT2 or PHASE2-1 or Motor winding 2A. 7408(AND gate) pin 9.
+#define PHASE1_B PB5 //NotCNT1 or PHASE1-2 or Motor winding 1B. 7408(AND gate) pin 5.
+#define PHASE2_B PB7 //Not CNT2 or PHASE2-2 or Motor winding 2B. 7408(AND gate) pin 12.
 #define Ref1 PB3 // DAC /PWM output goes to L6506 voltage Ref1 pin
 #define Ref2 PB4 // DAC /PWM output goes to L6506 voltage Ref2 pin
+
+///defining bit number for shift reg
+#define CNT1 15 //Phase1_A will goto 408(AND gate) pin 2.
+#define NotCNT1 14 //Phase1_B will goto 408(AND gate) 7408(AND gate) pin 9.
+#define CNT2 13 //Phase2_A will goto 7408(AND gate) pin 5.
+#define NotCNT2 12 //Phase2_B will goto 7408(AND gate) pin 12.
+#define Enable_A_B 11 //Enable H Bridge 1 i.e.. 1A and 1B
+#define Enable_C_D 10 //Enable H Bridge 1 i.e.. 2A and 2B
+
+#define Fast_Decay_A_B_Forward
+#define Fast_Decay_A_B_Reverse
+#define Slow_decay_AB
+
+#define Fast_Decay_C_D_Forward
+#define Fast_Decay_C_D_Reverse
+#define Slow_decay_CD
+
+///defining bits for shift reg to 74157 interface
+///All four channel A's will be connected to CCP1 and CCP2
+///All four channel B's will be receiving data from enable disable 7402 gates
+#define A1 9
+#define B1 8
+#define A2 7
+#define B2 6
+#define A3 5
+#define B3 4
+#define A4 3
+#define B4 2
+#define Select 1 //pin 1 of 74157 Low selects A and High Slects B
+#define Strobe 0 //pin 15. Low enables outputs. High disables. optional we may connect it to Ground
+
+/*
+ * 328P -> 7408 pin 1,4,10,13; in future 74157 multiplexer
+ *  */
+#define CCP_PORT PORTB
+#define CCP_DDR DDRB
+#define CCP1 PB1 //OC0A goes to 7408(AND gate) pin 1 and 4
+#define CCP2 PB2 //OC0B goes to 7408 (AND gate) pin 10 and 13
 #define Sin_PhaseA OCR1A //Register for 10bit PWM Phase A
 #define Sin_PhaseB OCR1B //Register for 10bit PWM  Phase B
 /*
- * 328P -> L298 / L6202
- *  */
-#define Enable_PORT PORTB
-#define Enable_DDR DDRB
-#define EN1 PB1 //OC0A if enable chopping is used in future
-#define EN2 PB2 //OC0B if enable chopping is used in future
-
-/*
- * DipSwitch -> Attiny2313
+ * DipSwitch -> Atmega328P
  *  */
 #define MS1 PD0
 #define MS2 PD1
 #define MS3 PD2
 
 /*
- * Attiny2313 Driver (Logic or other MCU) -> Attiny2313
+ * stepper driver inputs (Logic or other MCU) -> atmega328p
  *  */
 #define step PD3 // external interrupt
 #define dir PD4 //Direction FWD clockwise and REV anti-clockwise
 #define Chip_Enable PD6 // Brake functionality
+///Shift reg software////////////
+/**
+ * @brief Set serial clock pulse, latch clock pulse and data pins as output
+ *
+ */
+void init_shift_reg(void)
+{
+    shift_reg_ddr |= (1<<SH_CP)|(1<<ST_CP)|(1<<DS);/// 1. Set as output
+    shift_reg_port = 0x00; /// 2. Clear the port
+}
+/**
+ * @brief pulse the latch pin to latch data in shift register
+ */
+void latch(void)
+{
+    shift_reg_port|= (1<<ST_CP);/// 1. Set the latch clock pulse high
+        shift_reg_port&= ~(1<<ST_CP); /// 2. Set the latch clock pulse low
+}
+/**
+ * @brief shift 8 bits of data to a shift register.
+ *
+ * @details This  function accepts 8 bit data as parameter. this data is shifted to shift register one bit at a time.
+ * when all data is transferred to shift register it the latches by calling appropriate function.
+ *
+ * @param data 8 bit data to be transferred to 74HC595
+ */
+void shift_Data_8_bits(uint8_t data)
+{
 
+    for(uint8_t i=0;i<8;i++) /// 1. Loop for each bit of a byte
+    {
+        if(data & 0b00000001)/// 2. Perform bitwise and with data to filter out all the bit except the 0th bit.MSB is first.
+        {
+            shift_reg_port|= (1<<DS);/// 2a. If the result is 1 then the value of 0th bit is 1 and set DS = 1
+        }
+        else
+        {
+            shift_reg_port &= ~(1<<DS); /// 2b. If the result is 0 then the value of 0th bit is 0 and set DS = 0
+        }
+        data = data>>1; /// 3. Right shift the data by 1 position to get next bit to 0th position
+        shift_reg_port|= (1<<SH_CP); /// 4. Set shift clock high
+        shift_reg_port&= ~(1<<SH_CP);/// 5. Set shift clock low. The bit is then stored at i-th bit position
+
+    }
+    latch(); /// 6. All the bits are shifted now pulse latch clock.
+
+}
+
+void shift_Data_16_bits(uint16_t data)
+{
+
+    for(uint8_t i=0;i<16;i++) /// 1. Loop for each bit of a byte
+    {
+        if(data & 0x0001)/// 2. Perform bitwise and with data to filter out all the bit except the 0th bit.MSB is first.
+        {
+            shift_reg_port|= (1<<DS);/// 2a. If the result is 1 then the value of 0th bit is 1 and set DS = 1
+        }
+        else
+        {
+            shift_reg_port &= ~(1<<DS); /// 2b. If the result is 0 then the value of 0th bit is 0 and set DS = 0
+        }
+        data = data>>1; /// 3. Right shift the data by 1 position to get next bit to 0th position
+        shift_reg_port|= (1<<SH_CP); /// 4. Set shift clock high
+        shift_reg_port&= ~(1<<SH_CP);/// 5. Set shift clock low. The bit is then stored at i-th bit position
+
+    }
+    latch(); /// 6. All the bits are shifted now pulse latch clock.
+
+}
+
+///////////////////////////////////////PWM/////////////////////////////////////
 void setup_PWM(void)
 /*setup PWM SFRs @ 40.00kHz
  * Setup 8bit Fast PWM Mode 14 top in ICR1
@@ -98,19 +219,25 @@ void setup_PWM(void)
 	Sin_PhaseA=399;//Set duty cycle for channel A
 	Sin_PhaseB=103;//Set duty cycle for channel B
 	TCCR1B|=(0<<CS12)|(0<<CS11)|(1<<CS10);//CS12->10 = 001 is for 1:1 timer pre-scaler. Start timer
-	Enable_DDR |= (1<<EN1)|(1<<EN2);
+	CCP_DDR |= (1<<CCP1)|(1<<CCP2);
 }
 
 int main()
 {
 	setup_PWM();
 
+	init_shift_reg();
+	uint16_t spi_data = 0x8001;
+	shift_Data_16_bits(spi_data);
 	while(1)
 	{
 		for(uint8_t i=0;i<128;i++)
 		{
 			Sin_PhaseB= pgm_read_word(&sin_table_Phase_B[i]);
 			Sin_PhaseA= pgm_read_word(&sin_table_Phase_A[i]);
+
+
+			//spi_data = spi_data + 1;
 			_delay_ms(10);
 		}
 	}
