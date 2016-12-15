@@ -25,6 +25,7 @@
 #include <avr/interrupt.h> // for interrupt isr
 #include <util/atomic.h> // for interrupt atomic execution
 #include <avr/pgmspace.h> // for PROGMEM
+#include "my_74hc595_driver.h" //shift register driver
 //Function declarations
 void setup_int(void); //setup interrupt SFRs
 void set_Step_Jump(void); //setup microsteps
@@ -46,20 +47,6 @@ unsigned char Step_Jump = 0;
 
 
 /*
- *  Shift Reg Defines
- *  Cannot use SPI due to OC1B...lets try
- * */
-#define shift_reg_port PORTB /**< Port register for Shift Register */
-#define shift_reg_ddr DDRB /**< Data direction register for Shift Register */
-#define SH_CP PB5 /**< Shift register Serial clock pulse (PIN 11 of 74HC595) connection to MCU I/O Port bit. */
-#define ST_CP PB0 /**< Shift register Latch clock pulse (PIN 12 of 74HC595) connection to MCU I/O Port bit. */
-#define DS PB3 /**< Shift register Data (PIN 14 of 74HC595) connection to MCU I/O Port bit. */
-void init_shift_reg(void);
-void latch(void);
-void shift_Data_8_bits(uint8_t data);
-void shift_Data_16_bits(uint16_t data);
-
-/*
  * atmega328p -> H bridge
  *  */
 
@@ -77,12 +64,12 @@ void shift_Data_16_bits(uint16_t data);
 #define Ref2 PB4 // DAC /PWM output goes to L6506 voltage Ref2 pin
 
 ///defining bit number for shift reg
-#define CNT1 15 //Phase1_A will goto 408(AND gate) pin 2.
-#define NotCNT1 14 //Phase1_B will goto 408(AND gate) 7408(AND gate) pin 9.
-#define CNT2 13 //Phase2_A will goto 7408(AND gate) pin 5.
-#define NotCNT2 12 //Phase2_B will goto 7408(AND gate) pin 12.
-#define Enable_A_B 11 //Enable H Bridge 1 i.e.. 1A and 1B Enable_A_B
-#define Enable_C_D 10 //Enable H Bridge 1 i.e.. 2A and 2B Enable_C_D
+#define CNT1 7 //Phase1_A will goto 408(AND gate) pin 2.
+#define NotCNT1 6 //Phase1_B will goto 408(AND gate) 7408(AND gate) pin 9.
+#define CNT2 5 //Phase2_A will goto 7408(AND gate) pin 5.
+#define NotCNT2 4 //Phase2_B will goto 7408(AND gate) pin 12.
+#define Enable_A_B 3 //Enable H Bridge 1 i.e.. 1A and 1B Enable_A_B
+#define Enable_C_D 2 //Enable H Bridge 1 i.e.. 2A and 2B Enable_C_D
 
 #define Fast_Decay_A_B_Forward
 #define Fast_Decay_A_B_Reverse
@@ -94,14 +81,10 @@ void shift_Data_16_bits(uint16_t data);
 
 ///defining bits for shift reg to 74157 interface
 ///All four channel A's will be connected to CCP1 and CCP2
-///All four channel B's will be receiving data from enable disable 7402 gates
-#define B1 9
-#define B2 8
-#define B3 7
-#define B4 6
+///All four channel B's will be pulled high
 
-#define Select 5 //pin 1 of 74157 Low selects A and High Slects B
-#define Strobe 4 //pin 15. Low enables outputs. High disables. optional we may connect it to Ground
+#define Select 1 //pin 1 of 74157 Low selects A and High Slects B
+#define Strobe 0 //pin 15. Low enables outputs. High disables. optional we may connect it to Ground
 
 /*
  * 328P -> 7408 pin 1,4,10,13; in future 74157 multiplexer
@@ -125,75 +108,6 @@ void shift_Data_16_bits(uint16_t data);
 #define step PD3 // external interrupt
 #define dir PD4 //Direction FWD clockwise and REV anti-clockwise
 #define Chip_Enable PD6 // Brake functionality
-///Shift reg software////////////
-/**
- * @brief Set serial clock pulse, latch clock pulse and data pins as output
- *
- */
-void init_shift_reg(void)
-{
-    shift_reg_ddr |= (1<<SH_CP)|(1<<ST_CP)|(1<<DS);/// 1. Set as output
-    shift_reg_port = 0x00; /// 2. Clear the port
-}
-/**
- * @brief pulse the latch pin to latch data in shift register
- */
-void latch(void)
-{
-    shift_reg_port|= (1<<ST_CP);/// 1. Set the latch clock pulse high
-        shift_reg_port&= ~(1<<ST_CP); /// 2. Set the latch clock pulse low
-}
-/**
- * @brief shift 8 bits of data to a shift register.
- *
- * @details This  function accepts 8 bit data as parameter. this data is shifted to shift register one bit at a time.
- * when all data is transferred to shift register it the latches by calling appropriate function.
- *
- * @param data 8 bit data to be transferred to 74HC595
- */
-void shift_Data_8_bits(uint8_t data)
-{
-
-    for(uint8_t i=0;i<8;i++) /// 1. Loop for each bit of a byte
-    {
-        if(data & 0b00000001)/// 2. Perform bitwise and with data to filter out all the bit except the 0th bit.MSB is first.
-        {
-            shift_reg_port|= (1<<DS);/// 2a. If the result is 1 then the value of 0th bit is 1 and set DS = 1
-        }
-        else
-        {
-            shift_reg_port &= ~(1<<DS); /// 2b. If the result is 0 then the value of 0th bit is 0 and set DS = 0
-        }
-        data = data>>1; /// 3. Right shift the data by 1 position to get next bit to 0th position
-        shift_reg_port|= (1<<SH_CP); /// 4. Set shift clock high
-        shift_reg_port&= ~(1<<SH_CP);/// 5. Set shift clock low. The bit is then stored at i-th bit position
-
-    }
-    latch(); /// 6. All the bits are shifted now pulse latch clock.
-
-}
-
-void shift_Data_16_bits(uint16_t data)
-{
-
-    for(uint8_t i=0;i<16;i++) /// 1. Loop for each bit of a byte
-    {
-        if(data & 0x0001)/// 2. Perform bitwise and with data to filter out all the bit except the 0th bit.MSB is first.
-        {
-            shift_reg_port|= (1<<DS);/// 2a. If the result is 1 then the value of 0th bit is 1 and set DS = 1
-        }
-        else
-        {
-            shift_reg_port &= ~(1<<DS); /// 2b. If the result is 0 then the value of 0th bit is 0 and set DS = 0
-        }
-        data = data>>1; /// 3. Right shift the data by 1 position to get next bit to 0th position
-        shift_reg_port|= (1<<SH_CP); /// 4. Set shift clock high
-        shift_reg_port&= ~(1<<SH_CP);/// 5. Set shift clock low. The bit is then stored at i-th bit position
-
-    }
-    latch(); /// 6. All the bits are shifted now pulse latch clock.
-
-}
 
 ///////////////////////////////////////PWM/////////////////////////////////////
 void setup_PWM(void)
@@ -223,9 +137,11 @@ int main()
 {
 	setup_PWM();
 
-	init_shift_reg();
-	uint16_t spi_data = 0x4001;
-	shift_Data_16_bits(spi_data);
+	shift_reg_init();
+	//shift_reg_clear_memory(1);
+	shift_reg_enable_outputs();
+//	shift_reg_load_16_bits(spi_data);
+
 	while(1)
 	{
 		for(uint8_t i=0;i<128;i++)
@@ -233,8 +149,9 @@ int main()
 			Sin_PhaseB= pgm_read_word(&sin_table_Phase_B[i]);
 			Sin_PhaseA= pgm_read_word(&sin_table_Phase_A[i]);
 
-
-			//spi_data = spi_data + 1;
+			shift_reg_load_8_bits(0xF0);
+			_delay_ms(10);
+			shift_reg_clear_memory(1);
 			_delay_ms(10);
 		}
 	}
