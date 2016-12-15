@@ -81,8 +81,8 @@ void shift_Data_16_bits(uint16_t data);
 #define NotCNT1 14 //Phase1_B will goto 408(AND gate) 7408(AND gate) pin 9.
 #define CNT2 13 //Phase2_A will goto 7408(AND gate) pin 5.
 #define NotCNT2 12 //Phase2_B will goto 7408(AND gate) pin 12.
-#define Enable_A_B 11 //Enable H Bridge 1 i.e.. 1A and 1B
-#define Enable_C_D 10 //Enable H Bridge 1 i.e.. 2A and 2B
+#define Enable_A_B 11 //Enable H Bridge 1 i.e.. 1A and 1B Enable_A_B
+#define Enable_C_D 10 //Enable H Bridge 1 i.e.. 2A and 2B Enable_C_D
 
 #define Fast_Decay_A_B_Forward
 #define Fast_Decay_A_B_Reverse
@@ -95,16 +95,13 @@ void shift_Data_16_bits(uint16_t data);
 ///defining bits for shift reg to 74157 interface
 ///All four channel A's will be connected to CCP1 and CCP2
 ///All four channel B's will be receiving data from enable disable 7402 gates
-#define A1 9
-#define B1 8
-#define A2 7
-#define B2 6
-#define A3 5
-#define B3 4
-#define A4 3
-#define B4 2
-#define Select 1 //pin 1 of 74157 Low selects A and High Slects B
-#define Strobe 0 //pin 15. Low enables outputs. High disables. optional we may connect it to Ground
+#define B1 9
+#define B2 8
+#define B3 7
+#define B4 6
+
+#define Select 5 //pin 1 of 74157 Low selects A and High Slects B
+#define Strobe 4 //pin 15. Low enables outputs. High disables. optional we may connect it to Ground
 
 /*
  * 328P -> 7408 pin 1,4,10,13; in future 74157 multiplexer
@@ -227,7 +224,7 @@ int main()
 	setup_PWM();
 
 	init_shift_reg();
-	uint16_t spi_data = 0x8001;
+	uint16_t spi_data = 0x4001;
 	shift_Data_16_bits(spi_data);
 	while(1)
 	{
