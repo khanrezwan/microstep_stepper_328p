@@ -20,12 +20,13 @@
  * 	todo 10) 1 input for chip select...17 out of 20 usable pins gone...whoa
  * 	todo 11) need to port code written using atttiny
  * */
-#include<avr/io.h>
+//#include<avr/io.h>
 #include<util/delay.h>
 #include <avr/interrupt.h> // for interrupt isr
 #include <util/atomic.h> // for interrupt atomic execution
-#include <avr/pgmspace.h> // for PROGMEM
+//#include <avr/pgmspace.h> // for PROGMEM
 #include "my_74hc595_driver.h" //shift register driver
+#include "micro_step_tables.h"
 //Function declarations
 void int0_init(void); //setup interrupt SFRs
 void set_Step_Jump(void); //setup microsteps
@@ -35,11 +36,7 @@ void PoR_step(void); //on Power on Reset take one full step Forward
 
 //PROGMEM Store lookup table in program memory
 //static const int sin_table[17] PROGMEM ={0,131,210,265,320,369,418,467,515,563,611,658,705,781,858,938,1023};
-static const uint16_t sin_table_Phase_A[128] PROGMEM ={399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,365,334,304,274,256,238,219,200,182,163,143,124,103,81,51,0,51,81,103,124,143,163,182,200,219,238,256,274,304,334,365,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,365,334,304,274,256,238,219,200,182,163,143,124,103,81,51,0,51,81,103,124,143,163,182,200,219,238,256,274,304,334,365,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399};;
-static const uint16_t sin_table_Phase_B[128] PROGMEM={0,51,81,103,124,143,163,182,200,219,238,256,274,304,334,365,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,365,334,304,274,256,238,219,200,182,163,143,124,103,81,51,0,51,81,103,124,143,163,182,200,219,238,256,274,304,334,365,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,399,365,334,304,274,256,238,219,200,182,163,143,124,103,81,51};
-static const uint8_t Step_table_normal_forward[128] PROGMEM={0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100};
-static const uint8_t Step_table_normal_reverse[128] PROGMEM={0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01011100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b01101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100,0b10101100};
-static const uint8_t step_jump_table[8] PROGMEM = {1, 16, 8, 4, 0, 0, 0, 2};
+
 uint8_t Step_Number = 0;
 uint8_t Step_Jump = 0;
 #define FWD 1 //Clockwise
@@ -90,6 +87,7 @@ uint8_t Step_Jump = 0;
  *  */
 #define Mode_switch_DDR DDRD
 #define Mode_switch_PORT PORTD
+#define Mode_switch_PIN PIND
 #define MS1 PD4
 #define MS2 PD5
 #define MS3 PD6
@@ -99,11 +97,13 @@ uint8_t Step_Jump = 0;
  *  */
 #define step_dir_DDR DDRD
 #define step_dir_PORT PORTD
+#define step_dir_PIN PIND
 #define step PD2 // external interrupt 0
 #define dir PD3
 //Direction FWD clockwise and REV anti-clockwise
 #define Chip_Enable_DDR DDRD
 #define Chip_Enable_PORT PORTD
+#define Chip_Enable_PIN PIND
 #define Chip_Enable PD7 // Brake functionality
 /////////////////////////IO Funcionality///////////////////////////////
 void IO_PORT_Init(void)
@@ -112,7 +112,6 @@ void IO_PORT_Init(void)
 	step_dir_DDR &=~((1<<step)|(1<<dir));
 	step_dir_PORT |=(1<<step); //pull up
 	Chip_Enable_DDR&=~(1<<Chip_Enable);
-	//Chip_Enable_PORT|=(1<<Chip_Enable);
 	Debug_LED_DDR|=(1<<Debug_LED);
 }
 /////////////////////////////int0////////////////////////////////////////
@@ -125,7 +124,7 @@ void int0_init(void)
 
 ISR(INT0_vect)
 {
-	if (Chip_Enable_PORT & (1<<Chip_Enable))//if ChipEnable then take a step
+	if (Chip_Enable_PIN & (1<<Chip_Enable))//if ChipEnable then take a step
 		{
 		Debug_LED_Port^=(1<<Debug_LED);
 			uint8_t shift_data;
@@ -141,7 +140,7 @@ ISR(INT0_vect)
 			Sin_PhaseB= pgm_read_word(&sin_table_Phase_B[Step_Number]);
 			Sin_PhaseA= pgm_read_word(&sin_table_Phase_A[Step_Number]);
 
-			if (step_dir_PORT & (1<<dir))//DIR= FWD
+			if (step_dir_PIN & (1<<dir))//DIR= FWD
 			{
 				shift_data=pgm_read_byte(&Step_table_normal_forward[Step_Number]);
 				shift_reg_load_8_bits(shift_data);
@@ -159,7 +158,7 @@ ISR(INT0_vect)
 void set_Step_Jump(void)
 /*setup microsteps*/
 {
-	Step_Jump = pgm_read_byte(&step_jump_table[(Mode_switch_DDR & ((1<<MS1)|(1<<MS2)|(1<<MS3)))>>4]); // Read PIND for MS1,MS2 and MS3
+	Step_Jump = pgm_read_byte(&step_jump_table[(Mode_switch_PIN & ((1<<MS1)|(1<<MS2)|(1<<MS3)))>>4]); // Read PIND for MS1,MS2 and MS3
 
 }
 ///////////////////////////////////////PWM/////////////////////////////////////
@@ -192,33 +191,15 @@ int main()
 
 	shift_reg_clear_memory(1);
 	shift_reg_enable_outputs();
+	//shift_reg_load_8_bits(0b10011011);
 	setup_PWM();
 	IO_PORT_Init();
 	int0_init();
 	set_Step_Jump();
-	//sei();
-	//shift_reg_clear_memory(1);
+	sei();
 
-//	shift_reg_load_16_bits(spi_data);
-	Step_Jump = 1;
 	while(1)
 	{
-		for(uint8_t i = 0; i<128;i+=Step_Jump)
-		{
-			Sin_PhaseB= pgm_read_word(&sin_table_Phase_B[i]);
-			Sin_PhaseA= pgm_read_word(&sin_table_Phase_A[i]);
-			shift_reg_load_8_bits(pgm_read_byte(&Step_table_normal_forward[i]));
-			_delay_ms(50);
-		}
-//		for(uint8_t i=0;i<128;i++)
-//		{
-//			Sin_PhaseB= pgm_read_word(&sin_table_Phase_B[i]);
-//			Sin_PhaseA= pgm_read_word(&sin_table_Phase_A[i]);
-//
-//			shift_reg_load_8_bits(0xF0);
-//			_delay_ms(10);
-//			shift_reg_clear_memory(1);
-//			_delay_ms(10);
-//		}
+
 	}
 }
