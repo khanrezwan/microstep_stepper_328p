@@ -27,18 +27,25 @@
 //#include <avr/pgmspace.h> // for PROGMEM
 #include "my_74hc595_driver.h" //shift register driver
 #include "micro_step_tables.h"
+#define DEBUG_Print
+#ifdef DEBUG_Print
+#include "my_usart.h"
+uint8_t print_flag_int0=0;
+#endif
 //Function declarations
 void int0_init(void); //setup interrupt SFRs
 void set_Step_Jump(void); //setup microsteps
 void IO_PORT_Init(void); //initilize I/O port
 void setup_PWM(void); //setup PWM SFRs @ 20kHz
 void PoR_step(void); //on Power on Reset take one full step Forward
+void timer0_init(void);//timer0 will calculate time for decay and dead time
 
 //PROGMEM Store lookup table in program memory
 //static const int sin_table[17] PROGMEM ={0,131,210,265,320,369,418,467,515,563,611,658,705,781,858,938,1023};
 
-uint8_t Step_Number = 0;
-uint8_t Step_Jump = 0;
+volatile uint8_t Step_Number = 0;
+volatile uint8_t Step_Jump = 0;
+volatile uint8_t n_timer2=0;
 #define FWD 1 //Clockwise
 #define REV 0 //Anti- Clockwise
 
@@ -82,6 +89,8 @@ uint8_t Step_Jump = 0;
 #define CCP2 PB2 //OC0B goes to 74157
 #define Sin_PhaseA OCR1A //Register for 10bit PWM Phase A
 #define Sin_PhaseB OCR1B //Register for 10bit PWM  Phase B
+uint16_t Sin_PhaseA_variable,Sin_PhaseB_variable;
+uint8_t data_to_be_Shifted;
 /*
  * DipSwitch -> Atmega328P
  *  */
@@ -127,7 +136,7 @@ ISR(INT0_vect)
 	if (Chip_Enable_PIN & (1<<Chip_Enable))//if ChipEnable then take a step
 		{
 		Debug_LED_Port^=(1<<Debug_LED);
-			uint8_t shift_data;
+			//uint8_t shift_data;
 			//PWM_FSM_DRIVER(); //not calling this function to reduce status save
 			Step_Number += Step_Jump;
 
@@ -137,20 +146,23 @@ ISR(INT0_vect)
 			// if (flag == 0b00000001)
 
 
-			Sin_PhaseB= pgm_read_word(&sin_table_Phase_B[Step_Number]);
-			Sin_PhaseA= pgm_read_word(&sin_table_Phase_A[Step_Number]);
+			Sin_PhaseB_variable= pgm_read_word(&sin_table_Phase_B[Step_Number]);
+			Sin_PhaseA_variable= pgm_read_word(&sin_table_Phase_A[Step_Number]);
 
 			if (step_dir_PIN & (1<<dir))//DIR= FWD
 			{
-				shift_data=pgm_read_byte(&Step_table_normal_forward[Step_Number]);
-				shift_reg_load_8_bits(shift_data);
+				data_to_be_Shifted=pgm_read_byte(&Step_table_normal_forward[Step_Number]);
+				//shift_reg_load_8_bits(shift_data);
 
 			}
 			else //DIR = REV
 			{
-				shift_data=pgm_read_byte(&Step_table_normal_reverse[Step_Number]);
-				shift_reg_load_8_bits(shift_data);
+				data_to_be_Shifted=pgm_read_byte(&Step_table_normal_reverse[Step_Number]);
+				//shift_reg_load_8_bits(shift_data);
 			}
+			#ifdef DEBUG_Print
+			print_flag_int0 =1;
+			#endif
 
 		}
 }
@@ -159,9 +171,18 @@ void set_Step_Jump(void)
 /*setup microsteps*/
 {
 	Step_Jump = pgm_read_byte(&step_jump_table[(Mode_switch_PIN & ((1<<MS1)|(1<<MS2)|(1<<MS3)))>>4]); // Read PIND for MS1,MS2 and MS3
-
+	#ifdef DEBUG_Print
+	printf("Step_Jump= %d\n",Step_Jump);
+	#endif
 }
 ///////////////////////////////////////PWM/////////////////////////////////////
+ISR(TIMER1_OVF_vect)
+{
+	//todo add a flag to indicate Sin_PhaseA or B updated
+	Sin_PhaseA = Sin_PhaseA_variable;
+	Sin_PhaseB = Sin_PhaseB_variable;
+	shift_reg_load_8_bits(data_to_be_Shifted);
+}
 void setup_PWM(void)
 /*setup PWM SFRs @ 40.00kHz
  * Setup 8bit Fast PWM Mode 14 top in ICR1
@@ -178,15 +199,106 @@ void setup_PWM(void)
 	TCCR1B|=(1<<WGM13)|(1<<WGM12);
 	TCCR1A&=~(1<<WGM10);
 	TCCR1A|=(1<<COM1A1)|(0<<COM1A0)|(1<<COM1B1)|(1<<COM1B0)|(1<<WGM11);
+	TIMSK1|=(1<<TOIE1);//Enable overflow so that we may update Sin_PhaseA and B there
 	ICR1 = 400;
-	Sin_PhaseA=399;//Set duty cycle for channel A
-	Sin_PhaseB=103;//Set duty cycle for channel B
+	Sin_PhaseA_variable=399;//Set duty cycle for channel A
+	Sin_PhaseA_variable=103;//Set duty cycle for channel B
 	TCCR1B|=(0<<CS12)|(0<<CS11)|(1<<CS10);//CS12->10 = 001 is for 1:1 timer pre-scaler. Start timer
 	CCP_DDR |= (1<<CCP1)|(1<<CCP2);
 }
+///////////timer2 for fast decay and dead time////////////////////
+/**
+ * 16MHz counts 26
+ * (256/(16*10^6))S*10^6 =  16uS
+ * 40KHz PWM i.e. 25uS time period
+ * we r acknowledging steps at 20KHz i.e. 50uS
+ * overflow at 5uS
+ * so if we add pre scaler of 1:8 then overflow =16*8 = 128uS
+ * for 5uS we need to count (256/128uS) *5uS  = 10 after we overflow
+ * */
+ISR(TIMER2_OVF_vect)
+{
+	//ToDo add flag variable to prevent this thing from happening before first step
+	 n_timer2++;
+	 if(n_timer2>10)//keep track of 50uS i.e.
+		 n_timer2=0;
+	 if(n_timer2==6)
+	 {
+		 //Dead Time
+		 shift_reg_load_8_bits(Dead_time);
+	 }
+	 if(n_timer2>6 && n_timer2<=8)
+	 {
+		 //fast decay in mixed decay winding
+		 //slow decay
+	 }
+	 if(n_timer2>8 && n_timer2<=10)
+	 {
+		 //slow decay in mixed decay winding
+	 }
 
+
+}
+void timer2_init(void)
+{
+	TCNT2=245;
+	n_timer2=0;
+	TCCR2A = 0x00; //normal operation no ouputs in oc0a or oc0b
+	TIMSK2|=(1<<TOIE2); //enable Timer0 overflow
+	TCCR2B |=(1<<CS21);//set prescaler 1:8 and start timer
+
+}
+//////////////////////ADC0 and ADC1 triggered by Timer0//////////////////////////////
+ISR(TIMER0_OVF_vect)
+{
+	//may need to initate a flag for consecutive ADC conversion
+}
+void timer0_init(void)
+{
+	//TCNT0=245;
+	//n_timer=0;
+	TCCR0A = 0x00; //normal operation no ouputs in oc0a or oc0b
+	TIMSK0|=(1<<TOIE0); //enable Timer0 overflow
+	TCCR0B |=(1<<CS00);//set prescaler 1:1 and start timer todo re calculate timer need just dumping code
+}
+ISR(ADC_vect)
+{
+	//use some flag to indicate that a valid step has been taken
+	//read the result ADC
+	//change mux for next channel
+	//update tcnt0 for immediate overflow
+	//update a flag for tcnt longer overflow
+}
+void ADC_init()
+{
+		/// ADMUX section 23.9.1 page 262
+	    ///BIT 7 and BIT 6 – AVCC with external capacitor at AREF pin REFS0 =0 and REFS1= 1
+	    /// BIT 5 – ADC Left Adjust Result ADLAR = 0
+	    /// BIT 3:0 –MUX3:0 0b0000 for channel 0
+	    ADMUX = 0b01000000;
+	    //same as previous line
+	    //  ADMUX = (_BV(REFS0))| (ADMUX & ~_BV(REFS1))|(_BV(ADLAR))|(ADMUX & ~_BV(MUX3))|(ADMUX & ~_BV(MUX2))|(ADMUX & ~_BV(MUX1))|(ADMUX & ~_BV(MUX0));
+
+	    ///DIDR0 – Digital Input Disable Register 0 section Section 23.9.4 page 265 - 266
+	    /// Disable digital input buffer of ADC0  and ADC1 to save power consumption
+	    DIDR0 = 0b00000011;
+	    /// ADSCRB ADC Control and Status Register A Section 23.9.4 page 265 -266
+	    /// BIT2:0 Auto Trigger Source Select 100 = Timer0 overflow
+	    ADCSRB=0b00000100;
+	    /// ADSCRA ADC Control and Status Register A Section 23.9.2 page 263 -264
+	    ///Bit 7 – ADEN: ADC Enable =1 enable ADC
+	    ///Bit 6 – ADSC: ADC Start Conversion =0 do not start conversion
+	    ///Bit 5 – ADATE: ADC Auto Trigger Enable = 1 enable trigger
+	    ///Bit 4 – ADIF: ADC Interrupt Flag = 0
+	    ///Bit 3 – ADIE: ADC Interrupt Enable = 1 Enable ADC interrupt
+	    ///Bits 2:0 – ADPS2:0: ADC Prescaler Select Bits 010 division factor = 4 todo recheck the prescaler
+	    ADCSRA = 0b10101010;
+}
 int main()
 {
+	#ifdef DEBUG_Print
+	USART_config(9600);//9600 for proteus simulation
+	#endif
 	shift_reg_init();
 
 	shift_reg_clear_memory(1);
@@ -196,10 +308,24 @@ int main()
 	IO_PORT_Init();
 	int0_init();
 	set_Step_Jump();
+
+	#ifdef DEBUG_Print
+	printf("Initialized\n");
+	#endif
 	sei();
 
 	while(1)
 	{
+		#ifdef DEBUG_Print
+		if(print_flag_int0)
+		{
+			ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+			{
+				print_flag_int0 =0;
+			}
 
+			printf("Step number %d Direction %d SinPhaseA %d SinPhaseB %d Shift Reg Data 0x%x\n",Step_Number,(step_dir_PIN&(1<<dir))>>dir,Sin_PhaseA_variable,Sin_PhaseB_variable,data_to_be_Shifted);
+		}
+		#endif
 	}
 }

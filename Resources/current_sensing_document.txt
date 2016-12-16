@@ -1,0 +1,32 @@
+REff: http://forum.arduino.cc/index.php?topic=239945.0
+Since the current in question is DC and the resistor is connected to ground at one end , then we can say with reasonable certainty that the voltage drop across the resistor represents the current through both the device and the motors.
+Thus E = I x R = 2A x 0.5 ohms = 1Vdc @ 2A /per motor. Connecting Sense-A and Sense-B pins to your arduino Analog input pins allows you to measure your motor current in REAL TIME and program current thresholds to abort operation if the motor tries to drive something against a wall or whatever. So if the maximum value you should measure is 1V  (at 2A) if you don't think you will be drawing 2A you might consider using the INTERNAL 1.1V analog reference which would give you  full scale (1023) at 2A.
+If you don't use the internal reference you should consider adding a gain of 5 non-inverting op amp  amplifier.
+
+
+
+REff: http://forum.arduino.cc/index.php?topic=157475.0
+I've used current-sense Rs with the L298 chips, they go outside the chip in the sense line, 
+of course. One consideration is that you already lose 1.5-2V inside the L298 due to it's 
+being bipolar technology, and not MOSFET. Then, with the sense-R you lose a bit more. I 
+used 0.25-0.5 ohm sense-Rs, which give a v.drop of 0.5-1.0V for max currents of 2A, so
+you can see the additional loss right there. 0.25 ohms is the better choice. Note, you 
+also need fairly robust Rs here, as 0.5V * 2A = 1 watt, which is a lot of wasted heat.
+
+In my ckts, I just fed that voltage straight into the processor ADC, but for a more parts-
+hungry ckt with less loss, you can use a small value R, like 0.1 ohms or less, and then 
+amplify the signal using a non-inverting opAmp ckt. Takes an additional 6-8 parts. You 
+need the amplifier, since the Arduino ADC will not have enough resolution to accurately 
+measure the voltage across the smaller Rs.
+
+Lastly, it's also a good idea to use an RC noise filter between the sense ckt and the ADC. 
+I typically used 10K and 0.1 uF.
+
+
+useful links:
+
+http://www.dustynrobots.com/academia/research/digital-signal-processing-and-filtering-motor-current-sensing/
+
+http://www.opencircuits.com/Current_sense
+
+

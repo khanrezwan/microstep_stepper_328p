@@ -117,5 +117,76 @@ static const uint8_t Step_table_normal_reverse[128] PROGMEM={
 
 static const uint8_t step_jump_table[8] PROGMEM = {1, 16, 8, 4, 0, 0, 0, 2};
 
-
+typedef enum
+{
+	Fast, Slow, Mixed
+}decay_modes;
+const decay_modes decay_table_Sin_PhaseA_forward[128] PROGMEM={
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow};//CCP1
+const decay_modes decay_table_Sin_PhaseA_reverse[128] PROGMEM={
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,};//CCP1
+const decay_modes decay_table_Sin_PhaseB_forward[128] PROGMEM={
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed};//CCP2
+const decay_modes decay_table_Sin_PhaseB_reverse[128] PROGMEM={
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed};//CCP2
 #endif /* MICRO_STEP_TABLES_H_ */
