@@ -100,7 +100,12 @@ uint8_t data_to_be_Shifted;
 #define MS1 PD4
 #define MS2 PD5
 #define MS3 PD6
-
+/**
+ * H-bridge Sense resistor -> AVR
+ *
+ * */
+#define SENSE01 PC0
+#define SENSE02 PC1
 /*
  * stepper driver inputs (Logic or other MCU) -> atmega328p
  *  */
@@ -281,7 +286,7 @@ void ADC_init()
 
 	    ///DIDR0 – Digital Input Disable Register 0 section Section 23.9.4 page 265 - 266
 	    /// Disable digital input buffer of ADC0  and ADC1 to save power consumption
-	    DIDR0 = 0b00000011;
+	    DIDR0 |=(1<<SENSE01)|(1<<SENSE02);
 	    /// ADSCRB ADC Control and Status Register A Section 23.9.4 page 265 -266
 	    /// BIT2:0 Auto Trigger Source Select 100 = Timer0 overflow
 	    ADCSRB=0b00000100;
