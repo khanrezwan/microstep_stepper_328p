@@ -30,7 +30,9 @@
 #define DEBUG_Print
 #ifdef DEBUG_Print
 #include "my_usart.h"
-uint8_t print_flag_int0=0;
+volatile uint8_t print_flag_int0=0;
+volatile uint8_t print_flag_0_ADC = 0;//print flag for channel 0
+volatile uint8_t print_flag_1_ADC = 0;// print flag for channel 1
 #endif
 //Function declarations
 void int0_init(void); //setup interrupt SFRs
@@ -43,6 +45,10 @@ void timer0_init(void);//timer0 will calculate time for decay and dead time
 //PROGMEM Store lookup table in program memory
 //static const int sin_table[17] PROGMEM ={0,131,210,265,320,369,418,467,515,563,611,658,705,781,858,938,1023};
 
+volatile uint8_t ADC0=1;//first converting adc0 then adc1
+volatile uint16_t ADC_result_0 = 0; //conversion result for channel 0
+volatile uint16_t ADC_result_1 = 0; //conversion result for channel 1
+
 volatile uint8_t Step_Number = 0;
 volatile uint8_t Step_Jump = 0;
 volatile uint8_t n_timer2=0;
@@ -52,6 +58,7 @@ volatile uint8_t n_timer2=0;
 #define Debug_LED PB5
 #define Debug_LED_DDR DDRB
 #define Debug_LED_Port PORTB
+
 
 /*
  * atmega328p -> H bridge
@@ -258,16 +265,39 @@ ISR(TIMER0_OVF_vect)
 {
 	//may need to initate a flag for consecutive ADC conversion
 }
+
 void timer0_init(void)
 {
 	//TCNT0=245;
 	//n_timer=0;
 	TCCR0A = 0x00; //normal operation no ouputs in oc0a or oc0b
 	TIMSK0|=(1<<TOIE0); //enable Timer0 overflow
-	TCCR0B |=(1<<CS00);//set prescaler 1:1 and start timer todo re calculate timer need just dumping code
+	//TCCR0B |=(1<<CS00);//set prescaler 1:1 and start timer todo re calculate timer need just dumping code
+	TCCR0B |=(1<<CS02)|(1<<CS00);//set prescaler 1:1024 test code
 }
 ISR(ADC_vect)
 {
+	if(ADC0)
+	{
+		ADC0 = 0;
+		ADC_result_0 = ADC;//read the conversion
+		ADMUX = 0b01000001;//change channel to 1
+
+		#ifdef DEBUG_Print
+		print_flag_0_ADC = 1;
+		#endif
+		TCNT0 = 254;//set timer so that next conversion begins immediately
+	}
+	else
+	{
+		ADC0 = 1;
+		ADC_result_1 = ADC;//read the conversion
+		ADMUX = 0b01000000;//change back channel to 0
+		TCNT0 = 0 ;//initialize at some value
+		#ifdef DEBUG_Print
+		print_flag_1_ADC = 1;
+		#endif
+	}
 	//use some flag to indicate that a valid step has been taken
 	//read the result ADC
 	//change mux for next channel
@@ -308,11 +338,12 @@ int main()
 
 	shift_reg_clear_memory(1);
 	shift_reg_enable_outputs();
-	//shift_reg_load_8_bits(0b10011011);
 	setup_PWM();
 	IO_PORT_Init();
 	int0_init();
 	set_Step_Jump();
+	ADC_init();
+	timer0_init();
 
 	#ifdef DEBUG_Print
 	printf("Initialized\n");
@@ -331,6 +362,22 @@ int main()
 
 			printf("Step number %d Direction %d SinPhaseA %d SinPhaseB %d Shift Reg Data 0x%x\n",Step_Number,(step_dir_PIN&(1<<dir))>>dir,Sin_PhaseA_variable,Sin_PhaseB_variable,data_to_be_Shifted);
 		}
+		if(print_flag_0_ADC)
+		{
+			ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+			{
+				print_flag_0_ADC =0;
+			}
+			printf("Adc channel 0 value %d\n",ADC_result_0);
+		}
+		if(print_flag_1_ADC)
+				{
+					ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+					{
+						print_flag_1_ADC =0;
+					}
+					printf("Adc channel 1 value %d\n",ADC_result_1);
+				}
 		#endif
 	}
 }
