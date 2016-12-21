@@ -27,6 +27,7 @@
 //#include <avr/pgmspace.h> // for PROGMEM
 #include "my_74hc595_driver.h" //shift register driver
 #include "micro_step_tables.h"
+
 #define DEBUG_Print
 #ifdef DEBUG_Print
 #include "my_usart.h"
@@ -34,20 +35,31 @@ volatile uint8_t print_flag_int0=0;
 volatile uint8_t print_flag_0_ADC = 0;//print flag for channel 0
 volatile uint8_t print_flag_1_ADC = 0;// print flag for channel 1
 #endif
+
+//#define L298_test //Enables 1.1V internal reference for sense resistor..@see ADC_init()
+
+
 //Function declarations
 void int0_init(void); //setup interrupt SFRs
 void set_Step_Jump(void); //setup microsteps
 void IO_PORT_Init(void); //initilize I/O port
 void setup_PWM(void); //setup PWM SFRs @ 20kHz
 void PoR_step(void); //on Power on Reset take one full step Forward
-void timer0_init(void);//timer0 will calculate time for decay and dead time
+
+void timer2_init(void);//timer2 will calculate time for decay and dead time
+
+void timer0_init(void);//timer0 will trigger ADC and
+
+void ADC_disable();//Disable ADC
+void ADC_enable();//Enable ADC
+void ADC_init();//initialize ADX
 
 //PROGMEM Store lookup table in program memory
 //static const int sin_table[17] PROGMEM ={0,131,210,265,320,369,418,467,515,563,611,658,705,781,858,938,1023};
 
 volatile uint8_t ADC0=1;//first converting adc0 then adc1
-volatile uint16_t ADC_result_0 = 0; //conversion result for channel 0
-volatile uint16_t ADC_result_1 = 0; //conversion result for channel 1
+volatile uint16_t ADC_result[2] = {0,0}; //conversion result for channel 0
+//volatile uint16_t ADC_result_1 = 0; //conversion result for channel 1
 
 volatile uint8_t Step_Number = 0;
 volatile uint8_t Step_Jump = 0;
@@ -242,13 +254,14 @@ ISR(TIMER2_OVF_vect)
 	 if(n_timer2>6 && n_timer2<=8)
 	 {
 		 //fast decay in mixed decay winding
-		 //slow decay
+		 //slow decay in slow decay winding
 	 }
 	 if(n_timer2>8 && n_timer2<=10)
 	 {
 		 //slow decay in mixed decay winding
+		 //slow decay in slow decay winding
 	 }
-
+	 TCNT2=245;
 
 }
 void timer2_init(void)
@@ -280,9 +293,8 @@ ISR(ADC_vect)
 	if(ADC0)
 	{
 		ADC0 = 0;
-		ADC_result_0 = ADC;//read the conversion
-		ADMUX = 0b01000001;//change channel to 1
-
+		ADC_result[SENSE01] = ADC;//read the conversion
+		ADMUX |=(1<<SENSE02);// 0b01000010;//change back channel to 0
 		#ifdef DEBUG_Print
 		print_flag_0_ADC = 1;
 		#endif
@@ -291,28 +303,47 @@ ISR(ADC_vect)
 	else
 	{
 		ADC0 = 1;
-		ADC_result_1 = ADC;//read the conversion
-		ADMUX = 0b01000000;//change back channel to 0
+		ADC_result[SENSE02] = ADC;//read the conversion
+		ADMUX &=~(1<<SENSE02);// 0b01000000;//change back channel to 0
 		TCNT0 = 0 ;//initialize at some value
 		#ifdef DEBUG_Print
 		print_flag_1_ADC = 1;
 		#endif
 	}
 	//use some flag to indicate that a valid step has been taken
-	//read the result ADC
-	//change mux for next channel
-	//update tcnt0 for immediate overflow
-	//update a flag for tcnt longer overflow
 }
+
+void ADC_enable()
+{
+	ADCSRA |= (1<<ADEN)|(1<<ADIE);
+}
+
+void ADC_disable()
+{
+	ADCSRA &= ~(1<<ADEN)|~(1<<ADIE);
+}
+
 void ADC_init()
 {
+
+		#ifndef L298_test
 		/// ADMUX section 23.9.1 page 262
-	    ///BIT 7 and BIT 6 – AVCC with external capacitor at AREF pin REFS0 =0 and REFS1= 1
-	    /// BIT 5 – ADC Left Adjust Result ADLAR = 0
-	    /// BIT 3:0 –MUX3:0 0b0000 for channel 0
-	    ADMUX = 0b01000000;
-	    //same as previous line
-	    //  ADMUX = (_BV(REFS0))| (ADMUX & ~_BV(REFS1))|(_BV(ADLAR))|(ADMUX & ~_BV(MUX3))|(ADMUX & ~_BV(MUX2))|(ADMUX & ~_BV(MUX1))|(ADMUX & ~_BV(MUX0));
+		///BIT 7 and BIT 6 – AVCC with external capacitor at AREF pin REFS0 =0 and REFS1= 1
+		/// BIT 5 – ADC Left Adjust Result ADLAR = 0
+		/// BIT 3:0 –MUX3:0 0b0000 for channel 0
+		ADMUX = 0b01000000;
+		//same as previous line
+	    //  ADMUX = (_BV(REFS1))| (ADMUX & ~_BV(REFS0))| (ADMUX & ~_BV(ADLAR))|(ADMUX & ~_BV(MUX3))|(ADMUX & ~_BV(MUX2))|(ADMUX & ~_BV(MUX1))|(ADMUX & ~_BV(MUX0));
+		#endif
+		#ifdef L298_test
+		// We will be using 0.1ohm 5W sense resistor with L298
+		// at maximum 2A the voltage drop will be 2A*0.1ohm = 0.2V
+		// We will amplify that 0.2V to 1.1V using non inverting OPAMP amplifier with Rf/R1 =4.7Kohm / 47Kohm and Rg/R2 = 1Kohm or 10.5Kohm resistors
+		// Hence we will be getting full 10 bit resolution using 1.1 internal Vref of 328P
+		ADMUX = 0b11000000; /////BIT 7 and BIT 6 – Internal 1.1V Voltage Reference with external capacitor at AREF pin REFS0 =1 and REFS1= 1
+		#endif
+
+
 
 	    ///DIDR0 – Digital Input Disable Register 0 section Section 23.9.4 page 265 - 266
 	    /// Disable digital input buffer of ADC0  and ADC1 to save power consumption
@@ -321,13 +352,13 @@ void ADC_init()
 	    /// BIT2:0 Auto Trigger Source Select 100 = Timer0 overflow
 	    ADCSRB=0b00000100;
 	    /// ADSCRA ADC Control and Status Register A Section 23.9.2 page 263 -264
-	    ///Bit 7 – ADEN: ADC Enable =1 enable ADC
+	    ///Bit 7 – ADEN: ADC Enable =0 disable ADC
 	    ///Bit 6 – ADSC: ADC Start Conversion =0 do not start conversion
 	    ///Bit 5 – ADATE: ADC Auto Trigger Enable = 1 enable trigger
 	    ///Bit 4 – ADIF: ADC Interrupt Flag = 0
-	    ///Bit 3 – ADIE: ADC Interrupt Enable = 1 Enable ADC interrupt
+	    ///Bit 3 – ADIE: ADC Interrupt Enable = 0 Disable ADC interrupt
 	    ///Bits 2:0 – ADPS2:0: ADC Prescaler Select Bits 010 division factor = 4 todo recheck the prescaler
-	    ADCSRA = 0b10101010;
+	    ADCSRA = 0b00100010;
 }
 int main()
 {
@@ -343,6 +374,7 @@ int main()
 	int0_init();
 	set_Step_Jump();
 	ADC_init();
+	ADC_enable();
 	timer0_init();
 
 	#ifdef DEBUG_Print
@@ -368,16 +400,16 @@ int main()
 			{
 				print_flag_0_ADC =0;
 			}
-			printf("Adc channel 0 value %d\n",ADC_result_0);
+			printf("Sense01 / ADC0 value %d\n",ADC_result[SENSE01]);
 		}
 		if(print_flag_1_ADC)
-				{
-					ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-					{
-						print_flag_1_ADC =0;
-					}
-					printf("Adc channel 1 value %d\n",ADC_result_1);
-				}
+		{
+			ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+			{
+				print_flag_1_ADC =0;
+			}
+			printf("Sense02 / ADC1 value %d\n",ADC_result[SENSE02]);
+		}
 		#endif
 	}
 }
