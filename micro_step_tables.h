@@ -61,41 +61,6 @@ static const uint8_t Step_table_normal_forward[128] PROGMEM={
 		0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,
 		0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,
 		0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100};
-static const uint8_t Step_table_fast_deacy_forward[128] PROGMEM={
-		0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,
-		0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,
-		0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,
-		0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,
-		0b01101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,
-		0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,
-		0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,
-		0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,
-		0b10101110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,
-		0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,
-		0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,
-		0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,
-		0b10011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,
-		0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,
-		0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,
-		0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110};
-static const uint8_t Step_table_fast_deacy_reverse[128] PROGMEM={
-		0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,
-		0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,
-		0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,
-		0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,0b01011110,
-		0b01011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,
-		0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,
-		0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,
-		0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,0b10011110,
-		0b10011110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,
-		0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,
-		0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,
-		0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,0b10101110,
-		0b10101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,
-		0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,
-		0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,
-		0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110,0b01101110};
-
 static const uint8_t Step_table_normal_reverse[128] PROGMEM={
 		0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,
 		0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,0b10011100,
@@ -117,11 +82,14 @@ static const uint8_t Step_table_normal_reverse[128] PROGMEM={
 
 static const uint8_t step_jump_table[8] PROGMEM = {1, 16, 8, 4, 0, 0, 0, 2};
 
-typedef enum
-{
-	Fast, Slow, Mixed
-}decay_modes;
-const decay_modes decay_table_Sin_PhaseA_forward[128] PROGMEM={
+//typedef enum
+//{
+//	Fast, Slow, Mixed
+//}decay_modes;
+#define Mixed 0
+#define Slow 1
+#define Fast 2
+const uint8_t decay_table_Sin_PhaseA[128] PROGMEM={
 		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
 		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
 		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
@@ -138,24 +106,24 @@ const decay_modes decay_table_Sin_PhaseA_forward[128] PROGMEM={
 		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
 		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
 		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow};//CCP1
-const decay_modes decay_table_Sin_PhaseA_reverse[128] PROGMEM={
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,};//CCP1
-const decay_modes decay_table_Sin_PhaseB_forward[128] PROGMEM={
+//const decay_modes decay_table_Sin_PhaseA_reverse[128] PROGMEM={
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,};//CCP1
+const uint8_t decay_table_Sin_PhaseB[128] PROGMEM={
 		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
 		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
 		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
@@ -172,21 +140,21 @@ const decay_modes decay_table_Sin_PhaseB_forward[128] PROGMEM={
 		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
 		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
 		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed};//CCP2
-const decay_modes decay_table_Sin_PhaseB_reverse[128] PROGMEM={
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
-		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed};//CCP2
+//const decay_modes decay_table_Sin_PhaseB_reverse[128] PROGMEM={
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Slow,Slow,Slow,Slow,Slow,Slow,Slow,Slow,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,
+//		Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed,Mixed};//CCP2
 #endif /* MICRO_STEP_TABLES_H_ */
