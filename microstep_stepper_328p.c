@@ -360,6 +360,37 @@ void ADC_init()
 	    ///Bits 2:0 – ADPS2:0: ADC Prescaler Select Bits 010 division factor = 4 todo recheck the prescaler
 	    ADCSRA = 0b00100010;
 }
+void step_test()
+//todo fix a bug in decay modes...a massive bug re think the decay table
+{
+	Step_Jump =1;
+	Sin_PhaseB_variable= pgm_read_word(&sin_table_Phase_B[Step_Number]);
+	Sin_PhaseA_variable= pgm_read_word(&sin_table_Phase_A[Step_Number]);
+	Sin_PhaseA = Sin_PhaseA_variable;
+	Sin_PhaseB = Sin_PhaseB_variable;
+	shift_reg_load_8_bits(pgm_read_byte(&Step_table_normal_forward[Step_Number]));
+	//shift_reg_load_8_bits(data_to_be_Shifted);
+	shift_reg_load_8_bits(Dead_time);
+	if(pgm_read_byte(&decay_table_Sin_PhaseA_forward[Step_Number])==Mixed)
+	{
+		shift_reg_load_8_bits(pgm_read_byte(&Step_table_fast_deacy_forward[Step_Number]));
+	}
+	else
+	{
+		shift_reg_load_8_bits(Slow_decay);
+	}
+	if(pgm_read_byte(&decay_table_Sin_PhaseB_forward[Step_Number])==Mixed)
+	{
+		shift_reg_load_8_bits(pgm_read_byte(&Step_table_fast_deacy_forward[Step_Number]));
+	}
+	else
+	{
+
+	}
+	shift_reg_load_8_bits(pgm_read_byte(&Step_table_normal_forward[Step_Number]));
+	 shift_reg_load_8_bits(Dead_time);
+	 shift_reg_load_8_bits(Dead_time);
+}
 int main()
 {
 	#ifdef DEBUG_Print
