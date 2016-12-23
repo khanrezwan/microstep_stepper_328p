@@ -12493,6 +12493,28 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="160.02" y1="-160.02" x2="160.02" y2="-167.64" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IC6" gate="P" pin="GND"/>
+<pinref part="IC5" gate="P" pin="GND"/>
+<wire x1="-325.12" y1="15.24" x2="-325.12" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="P" pin="GND"/>
+<wire x1="-325.12" y1="12.7" x2="-325.12" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-325.12" y1="10.16" x2="-325.12" y2="5.08" width="0.1524" layer="91"/>
+<junction x="-325.12" y="10.16"/>
+<pinref part="IC4" gate="P" pin="GND"/>
+<wire x1="-325.12" y1="5.08" x2="-325.12" y2="0" width="0.1524" layer="91"/>
+<junction x="-325.12" y="5.08"/>
+<pinref part="IC1" gate="P" pin="GND"/>
+<wire x1="-325.12" y1="0" x2="-325.12" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-325.12" y="0"/>
+<pinref part="IC2" gate="P" pin="GND"/>
+<wire x1="-325.12" y1="-5.08" x2="-325.12" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="-325.12" y="-5.08"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="-325.12" y1="12.7" x2="-314.96" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-314.96" y1="12.7" x2="-314.96" y2="10.16" width="0.1524" layer="91"/>
+<junction x="-325.12" y="12.7"/>
+</segment>
 </net>
 <net name="5V" class="0">
 <segment>
@@ -12823,25 +12845,6 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <pinref part="IC7" gate="B" pin="+IN"/>
 <junction x="180.34" y="-144.78"/>
 <label x="177.8" y="-144.78" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="IC6" gate="P" pin="GND"/>
-<pinref part="IC5" gate="P" pin="GND"/>
-<wire x1="-325.12" y1="15.24" x2="-325.12" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="P" pin="GND"/>
-<wire x1="-325.12" y1="10.16" x2="-325.12" y2="5.08" width="0.1524" layer="91"/>
-<junction x="-325.12" y="10.16"/>
-<pinref part="IC4" gate="P" pin="GND"/>
-<wire x1="-325.12" y1="5.08" x2="-325.12" y2="0" width="0.1524" layer="91"/>
-<junction x="-325.12" y="5.08"/>
-<pinref part="IC1" gate="P" pin="GND"/>
-<wire x1="-325.12" y1="0" x2="-325.12" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="-325.12" y="0"/>
-<pinref part="IC2" gate="P" pin="GND"/>
-<wire x1="-325.12" y1="-5.08" x2="-325.12" y2="-12.7" width="0.1524" layer="91"/>
-<junction x="-325.12" y="-5.08"/>
 </segment>
 </net>
 <net name="+6.5V" class="0">

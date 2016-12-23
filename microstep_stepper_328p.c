@@ -435,7 +435,7 @@ void step_test()
 	#endif
 	Step_Jump =1;
 //lopp start
-	while(1){
+	//while(1){
 		for(uint8_t i = 0; i<128;i+=Step_Jump){
 
 		uint8_t temp_shift_reg_data,last_normal_reg_val=0x00;
@@ -444,7 +444,7 @@ void step_test()
 		Sin_PhaseA = Sin_PhaseA_variable;
 		Sin_PhaseB = Sin_PhaseB_variable;
 		#ifdef DEBUG_Print
-		 printf("Step %d Sin_Phase_A %d and  Sin_Phase_A\b %d",i,Sin_PhaseA,Sin_PhaseB);
+		 printf("Step %d Sin_Phase_A %d and  Sin_Phase_A\b %d\n",i,Sin_PhaseA,Sin_PhaseB);
 		 #endif
 		//delay here
 		last_normal_reg_val = pgm_read_byte(&Step_table_normal_forward[i]);
@@ -454,6 +454,8 @@ void step_test()
 		 #endif
 		_delay_ms(200);//delay here
 		shift_reg_load_8_bits(Dead_time);
+		printf("Step %d Dead time pattern %x\n",i,Dead_time);
+		_delay_ms(200);//delay here
 		temp_shift_reg_data = last_normal_reg_val;
 		temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
 		temp_shift_reg_data &=~(1<<Strobe);
@@ -513,10 +515,9 @@ void step_test()
 		 #endif
 		 shift_reg_load_8_bits(temp_shift_reg_data);
 		 _delay_ms(200);//delay here
-		 //delay here
 		 //loop end start over
 		}
-	}
+//	}
 }
 int main()
 {
