@@ -28,6 +28,7 @@
 #include "my_74hc595_driver.h" //shift register driver
 #include "micro_step_tables.h"
 
+#define offline_test
 #define DEBUG_Print
 #ifdef DEBUG_Print
 #include "my_usart.h"
@@ -432,86 +433,94 @@ void step_test()
 	#ifdef DEBUG_Print
 	printf("Initialized\n");
 	#endif
-//lopp start
 	Step_Jump =1;
-	uint8_t temp_shift_reg_data,last_normal_reg_val=0x00;
-	Sin_PhaseB_variable= pgm_read_word(&sin_table_Phase_B[Step_Number]);
-	Sin_PhaseA_variable= pgm_read_word(&sin_table_Phase_A[Step_Number]);
-	Sin_PhaseA = Sin_PhaseA_variable;
-	Sin_PhaseB = Sin_PhaseB_variable;
-	#ifdef DEBUG_Print
-	 printf("Step %d Sin_Phase_A %d and  Sin_Phase_A\b %d",Step_Number,Sin_PhaseA,Sin_PhaseB);
-	 #endif
-	//delay here
-	last_normal_reg_val = pgm_read_byte(&Step_table_normal_forward[Step_Number]);
-	shift_reg_load_8_bits(last_normal_reg_val);
-#ifdef DEBUG_Print
-	 printf("Step %d Normal driving pattern %x\n",Step_Number,last_normal_reg_val);
-	 #endif
-	//delay here
-	shift_reg_load_8_bits(Dead_time);
-	temp_shift_reg_data = last_normal_reg_val;
-	temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
-	temp_shift_reg_data &=~(1<<Strobe);
-	if(pgm_read_byte(&decay_table_Sin_PhaseA[Step_Number])==Mixed)
-	 {
-		 temp_shift_reg_data^=(1<<CNT1)|(1<<NotCNT1);
-		 //Do Fast Decay;
-		 //Toggle CNT NotCNT
+//lopp start
+	while(1){
+		for(uint8_t i = 0; i<128;i+=Step_Jump){
 
-	 }
-	 else//Slow Decay
-	 {
-		 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-	 }
-	 if(pgm_read_byte(&decay_table_Sin_PhaseB[Step_Number])==Mixed)
-	 {
-		 temp_shift_reg_data^=(1<<CNT2)|(1<<NotCNT2);
-		 //Do Fast Decay;
-		 //Toggle CNT NotCNT
+		uint8_t temp_shift_reg_data,last_normal_reg_val=0x00;
+		Sin_PhaseB_variable= pgm_read_word(&sin_table_Phase_B[i]);
+		Sin_PhaseA_variable= pgm_read_word(&sin_table_Phase_A[i]);
+		Sin_PhaseA = Sin_PhaseA_variable;
+		Sin_PhaseB = Sin_PhaseB_variable;
+		#ifdef DEBUG_Print
+		 printf("Step %d Sin_Phase_A %d and  Sin_Phase_A\b %d",i,Sin_PhaseA,Sin_PhaseB);
+		 #endif
+		//delay here
+		last_normal_reg_val = pgm_read_byte(&Step_table_normal_forward[i]);
+		shift_reg_load_8_bits(last_normal_reg_val);
+		#ifdef DEBUG_Print
+		 printf("Step %d Normal driving pattern %x\n",i,last_normal_reg_val);
+		 #endif
+		_delay_ms(200);//delay here
+		shift_reg_load_8_bits(Dead_time);
+		temp_shift_reg_data = last_normal_reg_val;
+		temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
+		temp_shift_reg_data &=~(1<<Strobe);
+		if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
+		 {
+			 temp_shift_reg_data^=(1<<CNT1)|(1<<NotCNT1);
+			 //Do Fast Decay;
+			 //Toggle CNT NotCNT
 
-	 }
-	 else//Slow Decay
-	 {
-		 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
-	 }
-	 shift_reg_load_8_bits(temp_shift_reg_data);
+		 }
+		 else//Slow Decay
+		 {
+			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+		 }
+		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
+		 {
+			 temp_shift_reg_data^=(1<<CNT2)|(1<<NotCNT2);
+			 //Do Fast Decay;
+			 //Toggle CNT NotCNT
 
-	 //delay here
-	#ifdef DEBUG_Print
-	 printf("Step %d 1st part of Mixed Decay loading %x\n",Step_Number,temp_shift_reg_data);
-	 #endif
-	 //slow decay in mixed decay winding
-	 //slow decay in slow decay winding
-	 temp_shift_reg_data = last_normal_reg_val;//ToDo which one better read the table or last loaded value from table
-	 temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
-	 temp_shift_reg_data &=~(1<<Strobe);
-	 if(pgm_read_byte(&decay_table_Sin_PhaseA[Step_Number])==Mixed)
-	 {
-		 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-	 }
-	 else//Slow Decay
-	 {
-		 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-	 }
-	 if(pgm_read_byte(&decay_table_Sin_PhaseB[Step_Number])==Mixed)
-	 {
-		 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+		 }
+		 else//Slow Decay
+		 {
+			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+		 }
+		 shift_reg_load_8_bits(temp_shift_reg_data);
 
-	 }
-	 else//Slow Decay
-	 {
-		 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
-	 }
-	#ifdef DEBUG_Print
-	 printf("Step %d 2nd part of Mixed Decay loading %x\n",Step_Number,temp_shift_reg_data);
-	 #endif
-	 shift_reg_load_8_bits(temp_shift_reg_data);
-	 //delay here
-	 //loop end start over
+
+		#ifdef DEBUG_Print
+		 printf("Step %d 1st part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
+		 #endif
+		 _delay_ms(200);//delay here
+		 //slow decay in mixed decay winding
+		 //slow decay in slow decay winding
+		 temp_shift_reg_data = last_normal_reg_val;//ToDo which one better read the table or last loaded value from table
+		 temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
+		 temp_shift_reg_data &=~(1<<Strobe);
+		 if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
+		 {
+			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+		 }
+		 else//Slow Decay
+		 {
+			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+		 }
+		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
+		 {
+			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+
+		 }
+		 else//Slow Decay
+		 {
+			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+		 }
+		#ifdef DEBUG_Print
+		 printf("Step %d 2nd part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
+		 #endif
+		 shift_reg_load_8_bits(temp_shift_reg_data);
+		 _delay_ms(200);//delay here
+		 //delay here
+		 //loop end start over
+		}
+	}
 }
 int main()
 {
+	#ifndef offline_test
 	#ifdef DEBUG_Print
 	USART_config(9600);//9600 for proteus simulation
 	#endif
@@ -562,4 +571,8 @@ int main()
 		}
 		#endif
 	}
+#endif
+#ifdef offline_test
+	step_test();
+#endif
 }
