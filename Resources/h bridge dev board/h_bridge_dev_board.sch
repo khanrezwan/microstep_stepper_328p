@@ -14066,7 +14066,7 @@ Siemens, distributor Buerklin, 11G766</description>
 <part name="SV4" library="con-lsta" deviceset="FE08-1" device=""/>
 <part name="SV5" library="con-lsta" deviceset="FE08-1" device=""/>
 <part name="SV6" library="con-lstb" deviceset="MA03-2" device=""/>
-<part name="R2" library="resistor" deviceset="R-US_" device="0207/12" value="3k"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="0207/12" value="3.3k"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="0207/12" value="10k"/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
@@ -14077,6 +14077,29 @@ Siemens, distributor Buerklin, 11G766</description>
 <sheets>
 <sheet>
 <plain>
+<text x="-172.72" y="-152.4" size="1.778" layer="112" rot="R90">+5V USB
+
+
++5v Power Supply</text>
+<text x="48.26" y="-53.34" size="1.778" layer="112">K</text>
+<text x="60.96" y="-43.18" size="1.778" layer="112">K</text>
+<text x="60.96" y="-33.02" size="1.778" layer="112">K</text>
+<text x="45.72" y="17.78" size="1.778" layer="112">K</text>
+<text x="58.42" y="30.48" size="1.778" layer="112">K</text>
+<text x="55.88" y="43.18" size="1.778" layer="112">K</text>
+<text x="45.72" y="58.42" size="1.778" layer="112">K</text>
+<text x="58.42" y="73.66" size="1.778" layer="112">K</text>
+<text x="55.88" y="83.82" size="1.778" layer="112">K</text>
+<text x="60.96" y="-101.6" size="1.778" layer="112">K</text>
+<text x="63.5" y="-109.22" size="1.778" layer="112">K</text>
+<text x="50.8" y="-119.38" size="1.778" layer="112">K</text>
+<text x="254" y="-121.92" size="1.778" layer="112">K</text>
+<text x="243.84" y="-111.76" size="1.778" layer="112">K</text>
+<text x="243.84" y="-101.6" size="1.778" layer="112">K</text>
+<text x="251.46" y="-50.8" size="1.778" layer="112">K</text>
+<text x="241.3" y="-38.1" size="1.778" layer="112">K</text>
+<text x="241.3" y="-30.48" size="1.778" layer="112">K</text>
+<text x="-91.44" y="81.28" size="1.778" layer="112">+5v Power Supply</text>
 </plain>
 <instances>
 <instance part="IC1" gate="A" x="-50.8" y="53.34"/>
@@ -16095,4 +16118,10 @@ Siemens, distributor Buerklin, 11G766</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
