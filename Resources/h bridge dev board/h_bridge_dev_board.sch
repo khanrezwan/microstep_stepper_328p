@@ -11002,70 +11002,6 @@ diameter 5 mm, grid 2.54 mm</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="zener_1n4736A">
-<packages>
-<package name="DO41Z10">
-<description>&lt;B&gt;DIODE&lt;/B&gt;&lt;p&gt;
-diameter 2.54 mm, horizontal, grid 10.16 mm</description>
-<wire x1="2.032" y1="-1.27" x2="-2.032" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="2.032" y1="-1.27" x2="2.032" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-2.032" y1="1.27" x2="2.032" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-2.032" y1="1.27" x2="-2.032" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.762" layer="51"/>
-<wire x1="-5.08" y1="0" x2="-4.064" y2="0" width="0.762" layer="51"/>
-<wire x1="-0.635" y1="0" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="0.635" x2="1.016" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="-0.635" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="1.524" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="1.016" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="0.254" y1="0.635" x2="0" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.635" x2="0" y2="0" width="0.1524" layer="21"/>
-<pad name="C" x="-5.08" y="0" drill="1.1176"/>
-<pad name="A" x="5.08" y="0" drill="1.1176"/>
-<text x="-1.905" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-1.905" y="-2.794" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-1.651" y1="-1.27" x2="-1.143" y2="1.27" layer="21"/>
-<rectangle x1="2.032" y1="-0.381" x2="3.937" y2="0.381" layer="21"/>
-<rectangle x1="-3.937" y1="-0.381" x2="-2.032" y2="0.381" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="1N4736A">
-<description>Zener Diode 6.8v</description>
-<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
-<text x="-1.778" y="1.905" size="1.778" layer="95">&gt;NAME</text>
-<text x="-1.778" y="-3.429" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="1N4738">
-<description>&lt;b&gt;Z DIODE &lt;br&gt;
-6.8 V, 1W, 5 percent</description>
-<gates>
-<gate name="G$1" symbol="1N4736A" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="DO41Z10">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="con-lstb">
 <description>&lt;b&gt;Pin Headers&lt;/b&gt;&lt;p&gt;
 Naming:&lt;p&gt;
@@ -14083,57 +14019,54 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <part name="RN2" library="resistor-sil" deviceset="G05R" device="" value="103G"/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="DB_AH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DF_AH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DR_AH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DB_AL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DF_AL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DR_AL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DB_BH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DF_BH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DR_BH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DB_BL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DF_BL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DR_BL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DB_CH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DF_CH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DR_CH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DB_CL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DF_CL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DR_CL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DB_DH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DF_DH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DR_DH" library="jumper" deviceset="J" device="30MM"/>
-<part name="DB_DL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DF_DL" library="jumper" deviceset="J" device="30MM"/>
-<part name="DR_DL" library="jumper" deviceset="J" device="30MM"/>
+<part name="DB_AH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DF_AH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DR_AH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DB_AL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DF_AL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DR_AL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DB_BH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DF_BH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DR_BH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DB_BL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DF_BL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DR_BL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DB_CH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DF_CH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DR_CH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DB_CL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DF_CL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DR_CL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DB_DH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DF_DH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DR_DH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DB_DL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DF_DL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="DR_DL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
 <part name="J25" library="jumper" deviceset="J" device="50MM"/>
 <part name="J26" library="jumper" deviceset="J" device="50MM"/>
 <part name="J27" library="jumper" deviceset="J" device="50MM"/>
 <part name="J28" library="jumper" deviceset="J" device="50MM"/>
-<part name="CAP_AH" library="jumper" deviceset="J" device="30MM"/>
-<part name="RES_BASE_AL" library="jumper" deviceset="J" device="30MM"/>
-<part name="CAP_AL" library="jumper" deviceset="J" device="30MM"/>
-<part name="RES_BASE_CH" library="jumper" deviceset="J" device="30MM"/>
-<part name="CAP_CH" library="jumper" deviceset="J" device="30MM"/>
-<part name="RES_BASE_CL" library="jumper" deviceset="J" device="30MM"/>
-<part name="CAP_CL" library="jumper" deviceset="J" device="30MM"/>
-<part name="RES_BASE_BH" library="jumper" deviceset="J" device="30MM"/>
-<part name="CAP_BH" library="jumper" deviceset="J" device="30MM"/>
-<part name="RES_BASE_BL" library="jumper" deviceset="J" device="30MM"/>
-<part name="CAP_BL" library="jumper" deviceset="J" device="30MM"/>
-<part name="RES_BASE_DH" library="jumper" deviceset="J" device="30MM"/>
-<part name="CAP_DH" library="jumper" deviceset="J" device="30MM"/>
-<part name="RES_BASE_DL" library="jumper" deviceset="J" device="30MM"/>
-<part name="CAP_DL" library="jumper" deviceset="J" device="30MM"/>
-<part name="RES_BASE_AH" library="jumper" deviceset="J" device="30MM"/>
+<part name="CAP_AH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="RES_BASE_AL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="CAP_AL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="RES_BASE_CH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="CAP_CH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="RES_BASE_CL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="CAP_CL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="RES_BASE_BH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="CAP_BH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="RES_BASE_BL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="CAP_BL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="RES_BASE_DH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="CAP_DH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="RES_BASE_DL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="CAP_DL" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
+<part name="RES_BASE_AH" library="jumper" deviceset="J" device="15MM" value="J15MM"/>
 <part name="INTERFACE" library="con-lstb" deviceset="MA07-2" device=""/>
 <part name="IC7" library="linear" deviceset="LM358" device="N"/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="R1" library="resistor" deviceset="R-US_" device="0207/15" value="330 ohm 1w"/>
-<part name="6.8V" library="zener_1n4736A" deviceset="1N4738" device=""/>
-<part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="SENSE" library="con-wago-500" deviceset="W237-102" device=""/>
 <part name="C1" library="resistor" deviceset="CPOL-US" device="E5-13" value="100uF 50v"/>
@@ -14195,6 +14128,7 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
+<part name="P+14" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14340,9 +14274,6 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <instance part="IC2" gate="P" x="-335.28" y="-12.7" rot="R90"/>
 <instance part="P+4" gate="1" x="-355.6" y="20.32"/>
 <instance part="GND6" gate="1" x="-314.96" y="7.62"/>
-<instance part="R1" gate="G$1" x="-35.56" y="86.36"/>
-<instance part="6.8V" gate="G$1" x="-20.32" y="81.28" rot="R90"/>
-<instance part="GND7" gate="1" x="-20.32" y="71.12"/>
 <instance part="GND8" gate="1" x="264.16" y="-38.1"/>
 <instance part="SENSE" gate="-1" x="-152.4" y="-10.16"/>
 <instance part="SENSE" gate="-2" x="-152.4" y="-15.24"/>
@@ -14406,6 +14337,7 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <instance part="GND18" gate="1" x="393.7" y="12.7"/>
 <instance part="GND19" gate="1" x="386.08" y="-63.5"/>
 <instance part="GND20" gate="1" x="401.32" y="-134.62"/>
+<instance part="P+14" gate="1" x="264.16" y="-10.16"/>
 </instances>
 <busses>
 </busses>
@@ -14893,6 +14825,11 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <wire x1="58.42" y1="15.24" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="15.24" x2="60.96" y2="30.48" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IC7" gate="P" pin="V+"/>
+<pinref part="P+14" gate="1" pin="+5V"/>
+<wire x1="264.16" y1="-17.78" x2="264.16" y2="-12.7" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="OUT_C" class="0">
 <segment>
@@ -15313,9 +15250,6 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <pinref part="POWER" gate="-1" pin="KL"/>
 <pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
 <wire x1="-48.26" y1="86.36" x2="-48.26" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="-48.26" y1="86.36" x2="-40.64" y2="86.36" width="0.1524" layer="91"/>
-<junction x="-48.26" y="86.36"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -15363,11 +15297,6 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <pinref part="J4" gate="1" pin="2"/>
 <wire x1="233.68" y1="-157.48" x2="223.52" y2="-157.48" width="0.1524" layer="91"/>
 <junction x="223.52" y="-157.48"/>
-</segment>
-<segment>
-<pinref part="GND7" gate="1" pin="GND"/>
-<pinref part="6.8V" gate="G$1" pin="A"/>
-<wire x1="-20.32" y1="73.66" x2="-20.32" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND8" gate="1" pin="GND"/>
@@ -15855,23 +15784,6 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <pinref part="IC7" gate="B" pin="+IN"/>
 <junction x="248.92" y="-165.1"/>
 <label x="246.38" y="-165.1" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="+6.5V" class="0">
-<segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="6.8V" gate="G$1" pin="C"/>
-<wire x1="-30.48" y1="86.36" x2="-20.32" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="86.36" x2="-20.32" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="86.36" x2="-20.32" y2="96.52" width="0.1524" layer="91"/>
-<junction x="-20.32" y="86.36"/>
-<junction x="-20.32" y="96.52"/>
-<label x="-17.78" y="96.52" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC7" gate="P" pin="V+"/>
-<junction x="264.16" y="-17.78"/>
-<label x="264.16" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$16" class="0">
