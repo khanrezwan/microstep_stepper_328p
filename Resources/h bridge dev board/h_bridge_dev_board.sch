@@ -14088,7 +14088,7 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <part name="SV3" library="con-lsta" deviceset="FE08-1" device=""/>
 <part name="SV4" library="con-lsta" deviceset="FE08-1" device=""/>
 <part name="SV5" library="con-lsta" deviceset="FE08-1" device=""/>
-<part name="SV6" library="con-lstb" deviceset="MA03-2" device=""/>
+<part name="SENSE_INTERFACE" library="con-lstb" deviceset="MA03-2" device=""/>
 <part name="R2" library="resistor" deviceset="R-US_" device="0207/12" value="3.3k"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="0207/12" value="10k"/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
@@ -14296,7 +14296,7 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <instance part="SV3" gate="G$1" x="-251.46" y="-81.28" rot="R270"/>
 <instance part="SV4" gate="G$1" x="-292.1" y="-175.26" rot="R90"/>
 <instance part="SV5" gate="G$1" x="-261.62" y="-175.26" rot="R90"/>
-<instance part="SV6" gate="1" x="-200.66" y="-73.66"/>
+<instance part="SENSE_INTERFACE" gate="1" x="-200.66" y="-73.66"/>
 <instance part="R2" gate="G$1" x="-190.5" y="-109.22" rot="R90"/>
 <instance part="R3" gate="G$1" x="-190.5" y="-124.46" rot="R90"/>
 <instance part="P+5" gate="1" x="-190.5" y="-101.6"/>
@@ -15055,9 +15055,9 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <label x="281.94" y="-22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV6" gate="1" pin="5"/>
-<junction x="-193.04" y="-71.12"/>
-<label x="-190.5" y="-71.12" size="1.778" layer="95"/>
+<pinref part="SENSE_INTERFACE" gate="1" pin="1"/>
+<junction x="-193.04" y="-76.2"/>
+<label x="-190.5" y="-76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SENSE02" class="0">
@@ -15076,7 +15076,7 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <label x="269.24" y="-167.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="SV6" gate="1" pin="3"/>
+<pinref part="SENSE_INTERFACE" gate="1" pin="3"/>
 <junction x="-193.04" y="-73.66"/>
 <label x="-190.5" y="-73.66" size="1.778" layer="95"/>
 </segment>
@@ -15924,14 +15924,14 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 </net>
 <net name="VREF" class="0">
 <segment>
-<pinref part="SV6" gate="1" pin="1"/>
-<junction x="-193.04" y="-76.2"/>
-<label x="-190.5" y="-76.2" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="VREF" gate="G$1" pin="S"/>
 <junction x="-172.72" y="-124.46"/>
 <label x="-170.18" y="-124.46" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SENSE_INTERFACE" gate="1" pin="5"/>
+<junction x="-193.04" y="-71.12"/>
+<label x="-190.5" y="-71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D9" class="0">
@@ -16201,11 +16201,6 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 </net>
 <net name="A2" class="0">
 <segment>
-<pinref part="SV6" gate="1" pin="2"/>
-<junction x="-208.28" y="-76.2"/>
-<label x="-213.36" y="-76.2" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="SV4" gate="G$1" pin="3"/>
 <junction x="-289.56" y="-167.64"/>
 <label x="-289.56" y="-165.1" size="1.778" layer="95" rot="R90"/>
@@ -16215,10 +16210,15 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <junction x="-266.7" y="-147.32"/>
 <label x="-266.7" y="-149.86" size="1.778" layer="95" rot="R270"/>
 </segment>
+<segment>
+<pinref part="SENSE_INTERFACE" gate="1" pin="6"/>
+<junction x="-208.28" y="-71.12"/>
+<label x="-213.36" y="-71.12" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="A1" class="0">
 <segment>
-<pinref part="SV6" gate="1" pin="4"/>
+<pinref part="SENSE_INTERFACE" gate="1" pin="4"/>
 <junction x="-208.28" y="-73.66"/>
 <label x="-213.36" y="-73.66" size="1.778" layer="95"/>
 </segment>
@@ -16235,11 +16235,6 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 </net>
 <net name="A0" class="0">
 <segment>
-<pinref part="SV6" gate="1" pin="6"/>
-<junction x="-208.28" y="-71.12"/>
-<label x="-213.36" y="-71.12" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="SV4" gate="G$1" pin="5"/>
 <junction x="-294.64" y="-167.64"/>
 <label x="-294.64" y="-165.1" size="1.778" layer="95" rot="R90"/>
@@ -16248,6 +16243,11 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <pinref part="PCB1" gate="G$1" pin="A0"/>
 <junction x="-271.78" y="-147.32"/>
 <label x="-271.78" y="-149.86" size="1.778" layer="95" rot="R270"/>
+</segment>
+<segment>
+<pinref part="SENSE_INTERFACE" gate="1" pin="2"/>
+<junction x="-208.28" y="-76.2"/>
+<label x="-213.36" y="-76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
