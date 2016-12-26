@@ -29,7 +29,7 @@
 #include "micro_step_tables.h"
 
 #define offline_test
-#define DEBUG_Print
+//#define DEBUG_Print
 #ifdef DEBUG_Print
 #include "my_usart.h"
 volatile uint8_t print_flag_int0=0;
@@ -37,6 +37,9 @@ volatile uint8_t print_flag_0_ADC = 0;//print flag for channel 0
 volatile uint8_t print_flag_1_ADC = 0;// print flag for channel 1
 #endif
 
+#ifdef offline_test
+#define delay_time 100
+#endif
 //#define L298_test //Enables 1.1V internal reference for sense resistor..@see ADC_init()
 
 
@@ -426,16 +429,16 @@ void step_test()
 	IO_PORT_Init();
 	int0_init();
 	set_Step_Jump();
-	ADC_init();
-	ADC_enable();
+	//ADC_init();
+	//ADC_enable();
 	timer0_init();
 
 	#ifdef DEBUG_Print
 	printf("Initialized\n");
 	#endif
-	Step_Jump =1;
+	Step_Jump =4;
 //lopp start
-	//while(1){
+	while(1){
 		for(uint8_t i = 0; i<128;i+=Step_Jump){
 
 		uint8_t temp_shift_reg_data,last_normal_reg_val=0x00;
@@ -452,72 +455,74 @@ void step_test()
 		#ifdef DEBUG_Print
 		 printf("Step %d Normal driving pattern %x\n",i,last_normal_reg_val);
 		 #endif
-		_delay_ms(200);//delay here
-		shift_reg_load_8_bits(Dead_time);
-		printf("Step %d Dead time pattern %x\n",i,Dead_time);
-		_delay_ms(200);//delay here
-		temp_shift_reg_data = last_normal_reg_val;
-		temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
-		temp_shift_reg_data &=~(1<<Strobe);
-		if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
-		 {
-			 temp_shift_reg_data^=(1<<CNT1)|(1<<NotCNT1);
-			 //Do Fast Decay;
-			 //Toggle CNT NotCNT
-
-		 }
-		 else//Slow Decay
-		 {
-			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-		 }
-		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
-		 {
-			 temp_shift_reg_data^=(1<<CNT2)|(1<<NotCNT2);
-			 //Do Fast Decay;
-			 //Toggle CNT NotCNT
-
-		 }
-		 else//Slow Decay
-		 {
-			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
-		 }
-		 shift_reg_load_8_bits(temp_shift_reg_data);
-
-
-		#ifdef DEBUG_Print
-		 printf("Step %d 1st part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
-		 #endif
-		 _delay_ms(200);//delay here
+		_delay_ms(delay_time);//delay here
+//		shift_reg_load_8_bits(Dead_time);
+//		#ifdef DEBUG_Print
+//		printf("Step %d Dead time pattern %x\n",i,Dead_time);
+//		#endif
+//		_delay_ms(1);//delay here
+//		temp_shift_reg_data = last_normal_reg_val;
+//		temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
+//		temp_shift_reg_data &=~(1<<Strobe);
+//		if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
+//		 {
+//			 temp_shift_reg_data^=(1<<CNT1)|(1<<NotCNT1);
+//			 //Do Fast Decay;
+//			 //Toggle CNT NotCNT
+//
+//		 }
+//		 else//Slow Decay
+//		 {
+//			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+//		 }
+//		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
+//		 {
+//			 temp_shift_reg_data^=(1<<CNT2)|(1<<NotCNT2);
+//			 //Do Fast Decay;
+//			 //Toggle CNT NotCNT
+//
+//		 }
+//		 else//Slow Decay
+//		 {
+//			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+//		 }
+//		 shift_reg_load_8_bits(temp_shift_reg_data);
+//
+//
+//		#ifdef DEBUG_Print
+//		 printf("Step %d 1st part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
+//		 #endif
+//		 _delay_ms(1);//delay here
 		 //slow decay in mixed decay winding
 		 //slow decay in slow decay winding
-		 temp_shift_reg_data = last_normal_reg_val;//ToDo which one better read the table or last loaded value from table
-		 temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
-		 temp_shift_reg_data &=~(1<<Strobe);
-		 if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
-		 {
-			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-		 }
-		 else//Slow Decay
-		 {
-			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-		 }
-		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
-		 {
-			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
-
-		 }
-		 else//Slow Decay
-		 {
-			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
-		 }
-		#ifdef DEBUG_Print
-		 printf("Step %d 2nd part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
-		 #endif
-		 shift_reg_load_8_bits(temp_shift_reg_data);
-		 _delay_ms(200);//delay here
+//		 temp_shift_reg_data = last_normal_reg_val;//ToDo which one better read the table or last loaded value from table
+//		 temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
+//		 temp_shift_reg_data &=~(1<<Strobe);
+//		 if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
+//		 {
+//			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+//		 }
+//		 else//Slow Decay
+//		 {
+//			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+//		 }
+//		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
+//		 {
+//			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+//
+//		 }
+//		 else//Slow Decay
+//		 {
+//			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+//		 }
+//		#ifdef DEBUG_Print
+//		 printf("Step %d 2nd part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
+//		 #endif
+//		 shift_reg_load_8_bits(temp_shift_reg_data);
+//		 _delay_ms(1);//delay here
 		 //loop end start over
 		}
-//	}
+	}
 }
 int main()
 {
