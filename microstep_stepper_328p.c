@@ -29,6 +29,7 @@
 #include "micro_step_tables.h"
 
 #define offline_test
+#define slow_pwm
 //#define DEBUG_Print
 #ifdef DEBUG_Print
 #include "my_usart.h"
@@ -38,7 +39,7 @@ volatile uint8_t print_flag_1_ADC = 0;// print flag for channel 1
 #endif
 
 #ifdef offline_test
-#define delay_time 100
+#define delay_time 1
 #endif
 //#define L298_test //Enables 1.1V internal reference for sense resistor..@see ADC_init()
 
@@ -223,7 +224,14 @@ void setup_PWM(void)
  * Resolution= log(TOP+1)/log(2)= 8 bit
  * */
 {
-
+#ifdef slow_pwm
+		TCCR1B|=(0<<WGM13)|(1<<WGM12);
+		TCCR1A|=(1<<COM1A1)|(0<<COM1A0)|(1<<COM1B1)|(1<<COM1B0)|(1<<WGM11)|(1<<WGM10);
+		Sin_PhaseA=0x0398;//Set duty cycle for channel A
+		Sin_PhaseB=0x0102;//Set duty cycle for channel B
+		TCCR1B|=(0<<CS12)|(0<<CS11)|(1<<CS10);//CS12->10 = 001 is for 1:1 timer pre-scaler. Start time
+#endif
+#ifndef slow_pwm
 	TCCR1B|=(1<<WGM13)|(1<<WGM12);
 	TCCR1A&=~(1<<WGM10);
 	TCCR1A|=(1<<COM1A1)|(0<<COM1A0)|(1<<COM1B1)|(1<<COM1B0)|(1<<WGM11);
@@ -232,6 +240,7 @@ void setup_PWM(void)
 	Sin_PhaseA_variable=399;//Set duty cycle for channel A
 	Sin_PhaseA_variable=103;//Set duty cycle for channel B
 	TCCR1B|=(0<<CS12)|(0<<CS11)|(1<<CS10);//CS12->10 = 001 is for 1:1 timer pre-scaler. Start timer
+#endif
 	CCP_DDR |= (1<<CCP1)|(1<<CCP2);
 }
 ///////////timer2 for fast decay and dead time////////////////////
@@ -436,14 +445,20 @@ void step_test()
 	#ifdef DEBUG_Print
 	printf("Initialized\n");
 	#endif
-	Step_Jump =4;
+	Step_Jump =1;
 //lopp start
 	while(1){
 		for(uint8_t i = 0; i<128;i+=Step_Jump){
 
 		uint8_t temp_shift_reg_data,last_normal_reg_val=0x00;
+		#ifndef slow_pwm
 		Sin_PhaseB_variable= pgm_read_word(&sin_table_Phase_B[i]);
 		Sin_PhaseA_variable= pgm_read_word(&sin_table_Phase_A[i]);
+		#endif
+		#ifdef slow_pwm
+		Sin_PhaseB_variable= pgm_read_word(&sin_table_Phase_B_15KHZ[i]);
+		Sin_PhaseA_variable= pgm_read_word(&sin_table_Phase_A_15Khz[i]);
+		#endif
 		Sin_PhaseA = Sin_PhaseA_variable;
 		Sin_PhaseB = Sin_PhaseB_variable;
 		#ifdef DEBUG_Print
@@ -455,71 +470,71 @@ void step_test()
 		#ifdef DEBUG_Print
 		 printf("Step %d Normal driving pattern %x\n",i,last_normal_reg_val);
 		 #endif
-		_delay_ms(delay_time);//delay here
-//		shift_reg_load_8_bits(Dead_time);
-//		#ifdef DEBUG_Print
-//		printf("Step %d Dead time pattern %x\n",i,Dead_time);
-//		#endif
-//		_delay_ms(1);//delay here
-//		temp_shift_reg_data = last_normal_reg_val;
-//		temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
-//		temp_shift_reg_data &=~(1<<Strobe);
-//		if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
-//		 {
-//			 temp_shift_reg_data^=(1<<CNT1)|(1<<NotCNT1);
-//			 //Do Fast Decay;
-//			 //Toggle CNT NotCNT
-//
-//		 }
-//		 else//Slow Decay
-//		 {
-//			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-//		 }
-//		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
-//		 {
-//			 temp_shift_reg_data^=(1<<CNT2)|(1<<NotCNT2);
-//			 //Do Fast Decay;
-//			 //Toggle CNT NotCNT
-//
-//		 }
-//		 else//Slow Decay
-//		 {
-//			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
-//		 }
-//		 shift_reg_load_8_bits(temp_shift_reg_data);
-//
-//
-//		#ifdef DEBUG_Print
-//		 printf("Step %d 1st part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
-//		 #endif
-//		 _delay_ms(1);//delay here
-		 //slow decay in mixed decay winding
-		 //slow decay in slow decay winding
-//		 temp_shift_reg_data = last_normal_reg_val;//ToDo which one better read the table or last loaded value from table
-//		 temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
-//		 temp_shift_reg_data &=~(1<<Strobe);
-//		 if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
-//		 {
-//			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-//		 }
-//		 else//Slow Decay
-//		 {
-//			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
-//		 }
-//		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
-//		 {
-//			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
-//
-//		 }
-//		 else//Slow Decay
-//		 {
-//			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
-//		 }
-//		#ifdef DEBUG_Print
-//		 printf("Step %d 2nd part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
-//		 #endif
-//		 shift_reg_load_8_bits(temp_shift_reg_data);
-//		 _delay_ms(1);//delay here
+		 _delay_us(300);//delay here
+		shift_reg_load_8_bits(Dead_time);
+		#ifdef DEBUG_Print
+		printf("Step %d Dead time pattern %x\n",i,Dead_time);
+		#endif
+		_delay_us(5);//delay here
+		temp_shift_reg_data = last_normal_reg_val;
+		temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
+		temp_shift_reg_data &=~(1<<Strobe);
+		if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
+		 {
+			 temp_shift_reg_data^=(1<<CNT1)|(1<<NotCNT1);
+			 //Do Fast Decay;
+			 //Toggle CNT NotCNT
+
+		 }
+		 else//Slow Decay
+		 {
+			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+		 }
+		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
+		 {
+			 temp_shift_reg_data^=(1<<CNT2)|(1<<NotCNT2);
+			 //Do Fast Decay;
+			 //Toggle CNT NotCNT
+
+		 }
+		 else//Slow Decay
+		 {
+			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+		 }
+		 shift_reg_load_8_bits(temp_shift_reg_data);
+
+
+		#ifdef DEBUG_Print
+		 printf("Step %d 1st part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
+		 #endif
+		 _delay_us(10);
+//		 slow decay in mixed decay winding
+//		 slow decay in slow decay winding
+		 temp_shift_reg_data = last_normal_reg_val;//ToDo which one better read the table or last loaded value from table
+		 temp_shift_reg_data |=(1<<Select)|(1<<Enable_A_B)|(1<<Enable_C_D);
+		 temp_shift_reg_data &=~(1<<Strobe);
+		 if(pgm_read_byte(&decay_table_Sin_PhaseA[i])==Mixed)
+		 {
+			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+		 }
+		 else//Slow Decay
+		 {
+			 temp_shift_reg_data&=~((1<<CNT1)|(1<<NotCNT1));
+		 }
+		 if(pgm_read_byte(&decay_table_Sin_PhaseB[i])==Mixed)
+		 {
+			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+
+		 }
+		 else//Slow Decay
+		 {
+			 temp_shift_reg_data&=~((1<<CNT2)|(1<<NotCNT2));
+		 }
+		#ifdef DEBUG_Print
+		 printf("Step %d 2nd part of Mixed Decay loading %x\n",i,temp_shift_reg_data);
+		 #endif
+		 shift_reg_load_8_bits(temp_shift_reg_data);
+		 _delay_us(30);//delay here
 		 //loop end start over
 		}
 	}
