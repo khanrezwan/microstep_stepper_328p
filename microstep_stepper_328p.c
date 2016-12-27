@@ -63,7 +63,7 @@ void ADC_init();//initialize ADX
 //static const int sin_table[17] PROGMEM ={0,131,210,265,320,369,418,467,515,563,611,658,705,781,858,938,1023};
 
 volatile uint8_t ADC0=1;//first converting adc0 then adc1
-volatile uint16_t ADC_result[2] = {0,0}; //conversion result for channel 0
+volatile uint16_t ADC_result[3] = {0,0,0}; //conversion result for channel 0,1,2
 //volatile uint16_t ADC_result_1 = 0; //conversion result for channel 1
 
 volatile uint8_t Step_Number = 0;
@@ -130,6 +130,8 @@ uint8_t data_to_be_Shifted;
  * */
 #define SENSE01 PC0
 #define SENSE02 PC1
+//Todo change Shift register port assignment
+#define VREF PC2  //VREF is connected with a 1k/10K pot. this pot is part of a volatge divider. i.e. pot will give us 0v->1.1V
 /*
  * stepper driver inputs (Logic or other MCU) -> atmega328p
  *  */
@@ -373,6 +375,7 @@ ISR(ADC_vect)
 		print_flag_1_ADC = 1;
 		#endif
 	}
+	//Todo Add VREF Code
 	//use some flag to indicate that a valid step has been taken
 }
 
@@ -388,6 +391,7 @@ void ADC_disable()
 
 void ADC_init()
 {
+
 
 		#ifndef L298_test
 		/// ADMUX section 23.9.1 page 262
@@ -410,18 +414,23 @@ void ADC_init()
 
 	    ///DIDR0 – Digital Input Disable Register 0 section Section 23.9.4 page 265 - 266
 	    /// Disable digital input buffer of ADC0  and ADC1 to save power consumption
-	    DIDR0 |=(1<<SENSE01)|(1<<SENSE02);
+	    DIDR0 |=(1<<SENSE01)|(1<<SENSE02)|(1<<VREF);
 	    /// ADSCRB ADC Control and Status Register A Section 23.9.4 page 265 -266
 	    /// BIT2:0 Auto Trigger Source Select 100 = Timer0 overflow
 	    ADCSRB=0b00000100;
+
 	    /// ADSCRA ADC Control and Status Register A Section 23.9.2 page 263 -264
 	    ///Bit 7 – ADEN: ADC Enable =0 disable ADC
 	    ///Bit 6 – ADSC: ADC Start Conversion =0 do not start conversion
 	    ///Bit 5 – ADATE: ADC Auto Trigger Enable = 1 enable trigger
 	    ///Bit 4 – ADIF: ADC Interrupt Flag = 0
 	    ///Bit 3 – ADIE: ADC Interrupt Enable = 0 Disable ADC interrupt
-	    ///Bits 2:0 – ADPS2:0: ADC Prescaler Select Bits 010 division factor = 4 todo recheck the prescaler
-	    ADCSRA = 0b00100010;
+	    ///Bits 2:0 – ADPS2:0: ADC Prescaler Select Bits 111 division factor = 1024
+	    //Clock 1:1024 328p ADC clock max frequency 200khz for 10 bit.
+	    //At 16 MHz we cannot configure for exact 200KHz. We are operating at 125KHz
+
+	    ADCSRA|= (1<<ADATE)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
+
 }
 void step_test()
 //complete off line driver..
