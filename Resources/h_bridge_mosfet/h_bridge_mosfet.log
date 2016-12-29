@@ -1,4 +1,4 @@
-# Writing all output to: Z:\home\rezwan\AVR_Toolchain\workspace_AVR\microstep_stepper_328p\Resources\h_bridge_mosfet\h_bridge_mosfet.log
+# Writing all output to: Z:\home\rezwan\AVR_Toolchain\workspaceAVR\microstep_stepper_328p\Resources\h_bridge_mosfet\h_bridge_mosfet.log
 set pad_wire_necking on
 bus diagonal
 fanout 5
@@ -8,5 +8,3 @@ route 50 16
 clean 2
 filter 5
 recorner diagonal
-status_file
-

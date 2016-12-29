@@ -479,7 +479,7 @@ void step_test()
 		#ifdef DEBUG_Print
 		 printf("Step %d Normal driving pattern %x\n",i,last_normal_reg_val);
 		 #endif
-		 _delay_us(300);//delay here
+		 _delay_ms(1);//delay here
 		shift_reg_load_8_bits(Dead_time);
 		#ifdef DEBUG_Print
 		printf("Step %d Dead time pattern %x\n",i,Dead_time);
