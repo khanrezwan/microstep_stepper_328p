@@ -1,0 +1,4395 @@
+%!PS-Adobe-3.0
+%cupsJobTicket: media=A4
+%%Creator: Wine PostScript Driver
+%%Title: ARES Professional - Z:\home\rezwan\AVR_Toolchain\workspace_AVR\microstep_stepper_328p\Resources\h_bridge_mosfet\h_bridge_mosfet.
+%%BoundingBox: 0 0 594 841
+%%Pages: (atend)
+%%Orientation: Portrait
+%%EndComments
+%%BeginProlog
+/tmpmtrx matrix def
+/hatch {
+  pathbbox
+  /b exch def /r exch def /t exch def /l exch def /gap 32 def
+  l cvi gap idiv gap mul
+  gap
+  r cvi gap idiv gap mul
+  {t moveto 0 b t sub rlineto}
+  for
+} bind def
+/B {pop pop pop pop} def
+/N {newpath} def
+/havetype42gdir {version cvi 2015 ge} bind def
+%%EndProlog
+%%BeginSetup
+mark {
+%%BeginFeature: *PageSize A4
+<</PageSize[595 842]/ImagingBBox null>>setpagedevice
+%%EndFeature
+} stopped cleartomark
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+/pgsave save def
+72 300 div 72 300 div scale
+0 3508 translate
+1 -1 scale
+0 rotate
+%%EndPageSetup
+gsave
+578 590 1345 2379 rectclip
+gsave
+578 590 moveto
+1345 0 rlineto
+0 2379 rlineto
+-1345 0 rlineto
+closepath
+gsave
+1.00 1.00 1.00 setrgbcolor
+fill
+grestore
+grestore
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1420 1139 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1404 1236 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1345 1393 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1411 1452 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+889 1170 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1069 1107 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1051 1746 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1476 2127 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1410 2174 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1358 2377 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1397 2439 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1231 2232 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1374 1980 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1051 1773 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+880 1773 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+844 1944 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+871 2196 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+790 2223 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+790 2412 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+970 1539 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1087 1386 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1240 864 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1204 2799 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+781 1233 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+970 1233 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+835 1395 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+745 1422 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1006 1386 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+709 2106 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 2295 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1646 2822 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 654 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 654 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+943 2829 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 2829 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+823 2649 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+823 2679 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+823 2709 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+763 2619 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+763 2649 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+763 2724 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+763 2706 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+873 1274 moveto
+21 0 rlineto
+0 21 rlineto
+-21 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 1284 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+943 1284 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+973 1284 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 1284 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 1284 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1063 1284 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1063 1194 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 1194 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 1194 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+973 1194 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+943 1194 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 1194 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+883 1194 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+873 1424 moveto
+21 0 rlineto
+0 21 rlineto
+-21 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 1434 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+943 1434 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+973 1434 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 1434 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 1434 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1063 1434 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1063 1344 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 1344 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 1344 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+973 1344 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+943 1344 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 1344 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+883 1344 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+888 2218 moveto
+21 0 rlineto
+0 21 rlineto
+-21 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+928 2228 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+958 2228 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+988 2228 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1018 2228 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1048 2228 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1078 2228 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1078 2138 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1048 2138 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1018 2138 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+988 2138 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+958 2138 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+928 2138 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+898 2138 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+903 2399 moveto
+21 0 rlineto
+0 21 rlineto
+-21 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+943 2409 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+973 2409 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 2409 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 2409 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1063 2409 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1093 2409 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1093 2319 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1063 2319 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 2319 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 2319 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+973 2319 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+943 2319 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 2319 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+678 1784 moveto
+21 0 rlineto
+0 21 rlineto
+-21 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+688 1824 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+688 1854 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+688 1884 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+688 1914 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+688 1944 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+688 1974 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+778 1974 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+778 1944 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+778 1914 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+778 1884 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+778 1854 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+778 1824 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+778 1794 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1123 1149 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1153 1149 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1183 1149 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 1179 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 1149 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 1119 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1123 1464 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1153 1464 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1183 1464 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 1494 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 1464 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 1434 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1123 2094 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1153 2094 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1183 2094 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 2124 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 2094 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 2064 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1123 2439 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1153 2439 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1183 2439 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 2469 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 2439 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1332 2409 moveto
+31 0 rlineto
+0 31 rlineto
+-31 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1412 2759 moveto
+21 0 rlineto
+0 21 rlineto
+-21 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1392 2769 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1362 2769 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1332 2769 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1332 2859 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1362 2859 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1392 2859 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1422 2859 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+gsave
+578 590 1345 2379 rectclip
+1401 704 moveto
+21 0 rlineto
+0 21 rlineto
+-21 0 rlineto
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1381 714 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1351 714 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1321 714 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1321 804 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1351 804 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1381 804 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1411 804 translate
+21 21 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 1209 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1722 1209 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 1284 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1722 1284 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 1359 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1722 1359 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 1434 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1722 1434 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 2169 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1722 2169 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 2244 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1722 2244 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 2319 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1722 2319 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 2379 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1722 2379 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1621 654 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1501 654 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1426 654 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1306 654 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1621 834 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1621 714 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1617 2709 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1497 2709 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1452 2709 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1332 2709 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1617 2874 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1617 2754 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1232 654 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1232 714 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1257 2709 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1257 2769 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+823 1044 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+823 924 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1183 819 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1213 819 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1213 939 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1153 939 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 999 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 999 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1272 1284 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1392 1284 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1093 1059 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1213 1059 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1527 1014 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1527 1134 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1467 1134 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1467 1014 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 1059 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 1059 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+928 1824 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1048 1824 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1407 2124 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1407 2004 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 1989 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+883 1989 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+883 1929 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1003 1929 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1287 2244 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1407 2244 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1063 1989 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1183 1989 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1512 2004 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1512 2124 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1138 1824 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1168 1824 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1181 1897 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1121 1897 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 1509 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 1509 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1198 1569 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1078 1569 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1497 1629 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1497 1509 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1392 1359 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1272 1359 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1153 1704 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1183 1704 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1138 1629 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1198 1629 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+928 1704 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1048 1704 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+913 1569 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1033 1569 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1422 1629 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1422 1509 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1018 2739 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1018 2619 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+898 2544 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1018 2544 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1437 2559 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1437 2439 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+958 2739 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+958 2619 translate
+33 33 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1018 2484 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+898 2484 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1183 2544 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1063 2544 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1512 2559 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1512 2439 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1407 2319 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1287 2319 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1138 2769 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1168 2769 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1123 2619 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1183 2619 translate
+27 27 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1677 1599 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1677 1629 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1677 1944 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1677 1974 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 1419 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 1389 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 1359 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 1329 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 2499 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 2469 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 2439 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+673 2409 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1782 894 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1782 864 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1782 834 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1775 2821 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1775 2791 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+%Ellipse
+gsave
+578 590 1345 2379 rectclip
+newpath
+tmpmtrx currentmatrix pop
+1775 2761 translate
+31 31 scale
+0 0 0.5 -360.0 -0.0 arc
+tmpmtrx setmatrix
+closepath
+gsave
+0.00 0.00 0.00 setrgbcolor
+fill
+grestore
+newpath
+grestore
+0.00 0.00 0.00 setrgbcolor
+2 setlinewidth 1 setlinejoin 1 setlinecap
+[] 0 setdash
+gsave
+578 590 1345 2379 rectclip
+613 624 moveto
+1275 0 rlineto
+0 2311 rlineto
+-1275 0 rlineto
+closepath
+stroke
+grestore
+0.00 0.00 0.00 setrgbcolor
+2 setlinewidth 1 setlinejoin 1 setlinecap
+[] 0 setdash
+gsave
+578 590 1345 2379 rectclip
+613 624 moveto
+1275 0 rlineto
+0 2311 rlineto
+-1275 0 rlineto
+closepath
+stroke
+grestore
+pgsave restore
+showpage
+%%Trailer
+%%Pages: 1
+%%EOF
