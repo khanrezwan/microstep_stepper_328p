@@ -37,9 +37,9 @@ mark {
 0 rotate
 %%EndPageSetup
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 gsave
-578 590 moveto
+505 520 moveto
 1345 0 rlineto
 0 2379 rlineto
 -1345 0 rlineto
@@ -52,10 +52,10 @@ grestore
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1420 1139 translate
+1347 1069 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -68,10 +68,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1404 1236 translate
+1331 1166 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -84,10 +84,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1345 1393 translate
+1272 1323 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -100,10 +100,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1411 1452 translate
+1338 1382 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -116,10 +116,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-889 1170 translate
+816 1100 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -132,10 +132,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1069 1107 translate
+996 1037 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -148,10 +148,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1051 1746 translate
+978 1676 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -164,10 +164,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1476 2127 translate
+1403 2057 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -180,10 +180,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1410 2174 translate
+1337 2104 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -196,10 +196,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1358 2377 translate
+1285 2307 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -212,10 +212,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1397 2439 translate
+1324 2369 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -228,10 +228,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1231 2232 translate
+1158 2162 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -244,10 +244,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1374 1980 translate
+1301 1910 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -260,10 +260,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1051 1773 translate
+978 1703 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -276,10 +276,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-880 1773 translate
+807 1703 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -292,10 +292,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-844 1944 translate
+771 1874 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -308,10 +308,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-871 2196 translate
+798 2126 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -324,10 +324,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-790 2223 translate
+717 2153 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -340,10 +340,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-790 2412 translate
+717 2342 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -356,10 +356,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-970 1539 translate
+897 1469 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -372,10 +372,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1087 1386 translate
+1014 1316 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -388,10 +388,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1240 864 translate
+1167 794 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -404,10 +404,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1204 2799 translate
+1131 2729 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -420,10 +420,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-781 1233 translate
+708 1163 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -436,10 +436,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-970 1233 translate
+897 1163 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -452,10 +452,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-835 1395 translate
+762 1325 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -468,10 +468,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-745 1422 translate
+672 1352 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -484,10 +484,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1006 1386 translate
+933 1316 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -500,10 +500,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-709 2106 translate
+636 2036 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -516,10 +516,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 2295 translate
+600 2225 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -532,10 +532,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1646 2822 translate
+1573 2752 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -548,10 +548,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 654 translate
+960 584 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -564,10 +564,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 654 translate
+930 584 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -580,10 +580,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-943 2829 translate
+870 2759 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -596,10 +596,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 2829 translate
+840 2759 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -611,8 +611,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-823 2649 moveto
+505 520 1345 2379 rectclip
+750 2579 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -624,8 +624,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-823 2679 moveto
+505 520 1345 2379 rectclip
+750 2609 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -637,8 +637,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-823 2709 moveto
+505 520 1345 2379 rectclip
+750 2639 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -651,10 +651,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-763 2619 translate
+690 2549 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -667,10 +667,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-763 2649 translate
+690 2579 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -683,10 +683,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-763 2724 translate
+690 2654 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -699,10 +699,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-763 2706 translate
+690 2636 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -714,8 +714,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-873 1274 moveto
+505 520 1345 2379 rectclip
+800 1204 moveto
 21 0 rlineto
 0 21 rlineto
 -21 0 rlineto
@@ -728,10 +728,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 1284 translate
+840 1214 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -744,10 +744,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-943 1284 translate
+870 1214 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -760,10 +760,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-973 1284 translate
+900 1214 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -776,10 +776,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 1284 translate
+930 1214 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -792,10 +792,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 1284 translate
+960 1214 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -808,10 +808,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1063 1284 translate
+990 1214 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -824,10 +824,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1063 1194 translate
+990 1124 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -840,10 +840,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 1194 translate
+960 1124 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -856,10 +856,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 1194 translate
+930 1124 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -872,10 +872,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-973 1194 translate
+900 1124 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -888,10 +888,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-943 1194 translate
+870 1124 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -904,10 +904,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 1194 translate
+840 1124 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -920,10 +920,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-883 1194 translate
+810 1124 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -935,8 +935,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-873 1424 moveto
+505 520 1345 2379 rectclip
+800 1354 moveto
 21 0 rlineto
 0 21 rlineto
 -21 0 rlineto
@@ -949,10 +949,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 1434 translate
+840 1364 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -965,10 +965,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-943 1434 translate
+870 1364 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -981,10 +981,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-973 1434 translate
+900 1364 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -997,10 +997,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 1434 translate
+930 1364 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1013,10 +1013,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 1434 translate
+960 1364 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1029,10 +1029,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1063 1434 translate
+990 1364 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1045,10 +1045,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1063 1344 translate
+990 1274 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1061,10 +1061,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 1344 translate
+960 1274 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1077,10 +1077,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 1344 translate
+930 1274 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1093,10 +1093,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-973 1344 translate
+900 1274 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1109,10 +1109,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-943 1344 translate
+870 1274 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1125,10 +1125,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 1344 translate
+840 1274 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1141,10 +1141,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-883 1344 translate
+810 1274 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1156,8 +1156,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-888 2218 moveto
+505 520 1345 2379 rectclip
+815 2148 moveto
 21 0 rlineto
 0 21 rlineto
 -21 0 rlineto
@@ -1170,10 +1170,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-928 2228 translate
+855 2158 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1186,10 +1186,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-958 2228 translate
+885 2158 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1202,10 +1202,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-988 2228 translate
+915 2158 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1218,10 +1218,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1018 2228 translate
+945 2158 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1234,10 +1234,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1048 2228 translate
+975 2158 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1250,10 +1250,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1078 2228 translate
+1005 2158 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1266,10 +1266,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1078 2138 translate
+1005 2068 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1282,10 +1282,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1048 2138 translate
+975 2068 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1298,10 +1298,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1018 2138 translate
+945 2068 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1314,10 +1314,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-988 2138 translate
+915 2068 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1330,10 +1330,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-958 2138 translate
+885 2068 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1346,10 +1346,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-928 2138 translate
+855 2068 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1362,10 +1362,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-898 2138 translate
+825 2068 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1377,8 +1377,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-903 2399 moveto
+505 520 1345 2379 rectclip
+830 2329 moveto
 21 0 rlineto
 0 21 rlineto
 -21 0 rlineto
@@ -1391,10 +1391,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-943 2409 translate
+870 2339 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1407,10 +1407,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-973 2409 translate
+900 2339 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1423,10 +1423,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 2409 translate
+930 2339 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1439,10 +1439,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 2409 translate
+960 2339 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1455,10 +1455,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1063 2409 translate
+990 2339 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1471,10 +1471,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1093 2409 translate
+1020 2339 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1487,10 +1487,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1093 2319 translate
+1020 2249 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1503,10 +1503,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1063 2319 translate
+990 2249 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1519,10 +1519,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 2319 translate
+960 2249 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1535,10 +1535,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 2319 translate
+930 2249 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1551,10 +1551,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-973 2319 translate
+900 2249 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1567,10 +1567,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-943 2319 translate
+870 2249 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1583,10 +1583,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 2319 translate
+840 2249 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1598,8 +1598,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-678 1784 moveto
+505 520 1345 2379 rectclip
+605 1714 moveto
 21 0 rlineto
 0 21 rlineto
 -21 0 rlineto
@@ -1612,10 +1612,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-688 1824 translate
+615 1754 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1628,10 +1628,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-688 1854 translate
+615 1784 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1644,10 +1644,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-688 1884 translate
+615 1814 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1660,10 +1660,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-688 1914 translate
+615 1844 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1676,10 +1676,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-688 1944 translate
+615 1874 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1692,10 +1692,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-688 1974 translate
+615 1904 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1708,10 +1708,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-778 1974 translate
+705 1904 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1724,10 +1724,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-778 1944 translate
+705 1874 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1740,10 +1740,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-778 1914 translate
+705 1844 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1756,10 +1756,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-778 1884 translate
+705 1814 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1772,10 +1772,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-778 1854 translate
+705 1784 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1788,10 +1788,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-778 1824 translate
+705 1754 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1804,10 +1804,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-778 1794 translate
+705 1724 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -1819,8 +1819,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1123 1149 moveto
+505 520 1345 2379 rectclip
+1050 1079 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1832,8 +1832,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1153 1149 moveto
+505 520 1345 2379 rectclip
+1080 1079 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1845,8 +1845,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1183 1149 moveto
+505 520 1345 2379 rectclip
+1110 1079 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1858,8 +1858,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 1179 moveto
+505 520 1345 2379 rectclip
+1259 1109 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1871,8 +1871,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 1149 moveto
+505 520 1345 2379 rectclip
+1259 1079 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1884,8 +1884,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 1119 moveto
+505 520 1345 2379 rectclip
+1259 1049 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1897,8 +1897,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1123 1464 moveto
+505 520 1345 2379 rectclip
+1050 1394 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1910,8 +1910,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1153 1464 moveto
+505 520 1345 2379 rectclip
+1080 1394 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1923,8 +1923,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1183 1464 moveto
+505 520 1345 2379 rectclip
+1110 1394 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1936,8 +1936,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 1494 moveto
+505 520 1345 2379 rectclip
+1259 1424 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1949,8 +1949,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 1464 moveto
+505 520 1345 2379 rectclip
+1259 1394 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1962,8 +1962,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 1434 moveto
+505 520 1345 2379 rectclip
+1259 1364 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1975,8 +1975,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1123 2094 moveto
+505 520 1345 2379 rectclip
+1050 2024 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -1988,8 +1988,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1153 2094 moveto
+505 520 1345 2379 rectclip
+1080 2024 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2001,8 +2001,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1183 2094 moveto
+505 520 1345 2379 rectclip
+1110 2024 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2014,8 +2014,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 2124 moveto
+505 520 1345 2379 rectclip
+1259 2054 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2027,8 +2027,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 2094 moveto
+505 520 1345 2379 rectclip
+1259 2024 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2040,8 +2040,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 2064 moveto
+505 520 1345 2379 rectclip
+1259 1994 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2053,8 +2053,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1123 2439 moveto
+505 520 1345 2379 rectclip
+1050 2369 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2066,8 +2066,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1153 2439 moveto
+505 520 1345 2379 rectclip
+1080 2369 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2079,8 +2079,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1183 2439 moveto
+505 520 1345 2379 rectclip
+1110 2369 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2092,8 +2092,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 2469 moveto
+505 520 1345 2379 rectclip
+1259 2399 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2105,8 +2105,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 2439 moveto
+505 520 1345 2379 rectclip
+1259 2369 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2118,8 +2118,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1332 2409 moveto
+505 520 1345 2379 rectclip
+1259 2339 moveto
 31 0 rlineto
 0 31 rlineto
 -31 0 rlineto
@@ -2131,8 +2131,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1412 2759 moveto
+505 520 1345 2379 rectclip
+1339 2689 moveto
 21 0 rlineto
 0 21 rlineto
 -21 0 rlineto
@@ -2145,10 +2145,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1392 2769 translate
+1319 2699 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2161,10 +2161,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1362 2769 translate
+1289 2699 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2177,10 +2177,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1332 2769 translate
+1259 2699 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2193,10 +2193,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1332 2859 translate
+1259 2789 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2209,10 +2209,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1362 2859 translate
+1289 2789 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2225,10 +2225,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1392 2859 translate
+1319 2789 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2241,10 +2241,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1422 2859 translate
+1349 2789 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2256,8 +2256,8 @@ grestore
 newpath
 grestore
 gsave
-578 590 1345 2379 rectclip
-1401 704 moveto
+505 520 1345 2379 rectclip
+1328 634 moveto
 21 0 rlineto
 0 21 rlineto
 -21 0 rlineto
@@ -2270,10 +2270,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1381 714 translate
+1308 644 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2286,10 +2286,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1351 714 translate
+1278 644 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2302,10 +2302,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1321 714 translate
+1248 644 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2318,10 +2318,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1321 804 translate
+1248 734 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2334,10 +2334,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1351 804 translate
+1278 734 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2350,10 +2350,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1381 804 translate
+1308 734 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2366,10 +2366,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1411 804 translate
+1338 734 translate
 21 21 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2382,10 +2382,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 1209 translate
+1379 1139 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2398,10 +2398,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1722 1209 translate
+1649 1139 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2414,10 +2414,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 1284 translate
+1379 1214 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2430,10 +2430,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1722 1284 translate
+1649 1214 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2446,10 +2446,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 1359 translate
+1379 1289 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2462,10 +2462,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1722 1359 translate
+1649 1289 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2478,10 +2478,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 1434 translate
+1379 1364 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2494,10 +2494,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1722 1434 translate
+1649 1364 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2510,10 +2510,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 2169 translate
+1379 2099 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2526,10 +2526,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1722 2169 translate
+1649 2099 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2542,10 +2542,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 2244 translate
+1379 2174 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2558,10 +2558,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1722 2244 translate
+1649 2174 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2574,10 +2574,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 2319 translate
+1379 2249 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2590,10 +2590,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1722 2319 translate
+1649 2249 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2606,10 +2606,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 2379 translate
+1379 2309 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2622,10 +2622,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1722 2379 translate
+1649 2309 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2638,10 +2638,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1621 654 translate
+1548 584 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2654,10 +2654,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1501 654 translate
+1428 584 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2670,10 +2670,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1426 654 translate
+1353 584 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2686,10 +2686,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1306 654 translate
+1233 584 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2702,10 +2702,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1621 834 translate
+1548 764 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2718,10 +2718,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1621 714 translate
+1548 644 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2734,10 +2734,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1617 2709 translate
+1544 2639 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2750,10 +2750,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1497 2709 translate
+1424 2639 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2766,10 +2766,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1452 2709 translate
+1379 2639 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2782,10 +2782,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1332 2709 translate
+1259 2639 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2798,10 +2798,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1617 2874 translate
+1544 2804 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2814,10 +2814,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1617 2754 translate
+1544 2684 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2830,10 +2830,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1232 654 translate
+1159 584 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2846,10 +2846,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1232 714 translate
+1159 644 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2862,10 +2862,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1257 2709 translate
+1184 2639 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2878,10 +2878,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1257 2769 translate
+1184 2699 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2894,10 +2894,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-823 1044 translate
+750 974 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2910,10 +2910,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-823 924 translate
+750 854 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2926,10 +2926,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1183 819 translate
+1110 749 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2942,10 +2942,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1213 819 translate
+1140 749 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2958,10 +2958,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1213 939 translate
+1140 869 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2974,10 +2974,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1153 939 translate
+1080 869 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -2990,10 +2990,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 999 translate
+840 929 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3006,10 +3006,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 999 translate
+960 929 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3022,10 +3022,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1272 1284 translate
+1199 1214 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3038,10 +3038,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1392 1284 translate
+1319 1214 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3054,10 +3054,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1093 1059 translate
+1020 989 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3070,10 +3070,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1213 1059 translate
+1140 989 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3086,10 +3086,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1527 1014 translate
+1454 944 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3102,10 +3102,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1527 1134 translate
+1454 1064 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3118,10 +3118,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1467 1134 translate
+1394 1064 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3134,10 +3134,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1467 1014 translate
+1394 944 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3150,10 +3150,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 1059 translate
+960 989 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3166,10 +3166,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 1059 translate
+840 989 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3182,10 +3182,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-928 1824 translate
+855 1754 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3198,10 +3198,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1048 1824 translate
+975 1754 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3214,10 +3214,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1407 2124 translate
+1334 2054 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3230,10 +3230,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1407 2004 translate
+1334 1934 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3246,10 +3246,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 1989 translate
+930 1919 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3262,10 +3262,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-883 1989 translate
+810 1919 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3278,10 +3278,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-883 1929 translate
+810 1859 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3294,10 +3294,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1003 1929 translate
+930 1859 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3310,10 +3310,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1287 2244 translate
+1214 2174 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3326,10 +3326,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1407 2244 translate
+1334 2174 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3342,10 +3342,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1063 1989 translate
+990 1919 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3358,10 +3358,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1183 1989 translate
+1110 1919 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3374,10 +3374,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1512 2004 translate
+1439 1934 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3390,10 +3390,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1512 2124 translate
+1439 2054 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3406,10 +3406,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1138 1824 translate
+1065 1754 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3422,10 +3422,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1168 1824 translate
+1095 1754 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3438,10 +3438,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1181 1897 translate
+1108 1827 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3454,10 +3454,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1121 1897 translate
+1048 1827 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3470,10 +3470,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 1509 translate
+960 1439 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3486,10 +3486,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 1509 translate
+840 1439 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3502,10 +3502,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1198 1569 translate
+1125 1499 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3518,10 +3518,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1078 1569 translate
+1005 1499 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3534,10 +3534,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1497 1629 translate
+1424 1559 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3550,10 +3550,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1497 1509 translate
+1424 1439 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3566,10 +3566,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1392 1359 translate
+1319 1289 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3582,10 +3582,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1272 1359 translate
+1199 1289 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3598,10 +3598,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1153 1704 translate
+1080 1634 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3614,10 +3614,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1183 1704 translate
+1110 1634 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3630,10 +3630,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1138 1629 translate
+1065 1559 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3646,10 +3646,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1198 1629 translate
+1125 1559 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3662,10 +3662,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-928 1704 translate
+855 1634 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3678,10 +3678,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1048 1704 translate
+975 1634 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3694,10 +3694,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-913 1569 translate
+840 1499 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3710,10 +3710,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1033 1569 translate
+960 1499 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3726,10 +3726,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1422 1629 translate
+1349 1559 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3742,10 +3742,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1422 1509 translate
+1349 1439 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3758,10 +3758,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1018 2739 translate
+945 2669 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3774,10 +3774,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1018 2619 translate
+945 2549 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3790,10 +3790,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-898 2544 translate
+825 2474 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3806,10 +3806,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1018 2544 translate
+945 2474 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3822,10 +3822,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1437 2559 translate
+1364 2489 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3838,10 +3838,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1437 2439 translate
+1364 2369 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3854,10 +3854,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-958 2739 translate
+885 2669 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3870,10 +3870,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-958 2619 translate
+885 2549 translate
 33 33 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3886,10 +3886,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1018 2484 translate
+945 2414 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3902,10 +3902,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-898 2484 translate
+825 2414 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3918,10 +3918,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1183 2544 translate
+1110 2474 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3934,10 +3934,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1063 2544 translate
+990 2474 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3950,10 +3950,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1512 2559 translate
+1439 2489 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3966,10 +3966,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1512 2439 translate
+1439 2369 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3982,10 +3982,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1407 2319 translate
+1334 2249 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -3998,10 +3998,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1287 2319 translate
+1214 2249 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4014,10 +4014,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1138 2769 translate
+1065 2699 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4030,10 +4030,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1168 2769 translate
+1095 2699 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4046,10 +4046,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1123 2619 translate
+1050 2549 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4062,10 +4062,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1183 2619 translate
+1110 2549 translate
 27 27 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4078,10 +4078,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1677 1599 translate
+1604 1529 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4094,10 +4094,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1677 1629 translate
+1604 1559 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4110,10 +4110,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1677 1944 translate
+1604 1874 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4126,10 +4126,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1677 1974 translate
+1604 1904 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4142,10 +4142,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 1419 translate
+600 1349 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4158,10 +4158,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 1389 translate
+600 1319 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4174,10 +4174,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 1359 translate
+600 1289 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4190,10 +4190,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 1329 translate
+600 1259 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4206,10 +4206,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 2499 translate
+600 2429 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4222,10 +4222,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 2469 translate
+600 2399 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4238,10 +4238,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 2439 translate
+600 2369 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4254,10 +4254,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-673 2409 translate
+600 2339 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4270,10 +4270,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1782 894 translate
+1709 824 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4286,10 +4286,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1782 864 translate
+1709 794 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4302,10 +4302,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1782 834 translate
+1709 764 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4318,10 +4318,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1775 2821 translate
+1702 2751 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4334,10 +4334,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1775 2791 translate
+1702 2721 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4350,10 +4350,10 @@ newpath
 grestore
 %Ellipse
 gsave
-578 590 1345 2379 rectclip
+505 520 1345 2379 rectclip
 newpath
 tmpmtrx currentmatrix pop
-1775 2761 translate
+1702 2691 translate
 31 31 scale
 0 0 0.5 -360.0 -0.0 arc
 tmpmtrx setmatrix
@@ -4368,8 +4368,8 @@ grestore
 2 setlinewidth 1 setlinejoin 1 setlinecap
 [] 0 setdash
 gsave
-578 590 1345 2379 rectclip
-613 624 moveto
+505 520 1345 2379 rectclip
+540 554 moveto
 1275 0 rlineto
 0 2311 rlineto
 -1275 0 rlineto
@@ -4380,8 +4380,8 @@ grestore
 2 setlinewidth 1 setlinejoin 1 setlinecap
 [] 0 setdash
 gsave
-578 590 1345 2379 rectclip
-613 624 moveto
+505 520 1345 2379 rectclip
+540 554 moveto
 1275 0 rlineto
 0 2311 rlineto
 -1275 0 rlineto
