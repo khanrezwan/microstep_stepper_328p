@@ -39,7 +39,7 @@ void shift_reg_clear_memory(uint8_t latch)
 void shift_reg_init(void)
 {
     shift_reg_ddr |= (1<<SH_CP)|(1<<ST_CP)|(1<<DS)|(1<<MR);/// 1. Set as output
-    shift_reg_port &= ((1<<SH_CP)|(1<<ST_CP)|(1<<DS)|(1<<MR)); /// 2. Clear the port
+    shift_reg_port &= ~((1<<SH_CP)|(1<<ST_CP)|(1<<DS)|(1<<MR)); /// 2. Clear the port
     shift_reg_OE_ddr|=(1<<OE);
 
 }
